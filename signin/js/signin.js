@@ -1,6 +1,5 @@
-const signUpBtn = document.querySelector('.sign-up-btn');
-const signUpForm = document.querySelector('.sign-up-form');
-const name = document.querySelector('#name');
+const signInBtn = document.querySelector('.sign-in-btn');
+const signInForm = document.querySelector('.sign-in-form');
 const email = document.querySelector('#email');
 const password = document.querySelector('#pass');
 const terms = document.querySelector('#terms');
@@ -8,15 +7,14 @@ const terms = document.querySelector('#terms');
 const togglePassword = document.querySelector('.togglePassword');
 
 const showPass = document.querySelector('.fa-eye-slash')
-signUpForm.addEventListener('input', (e) =>{
+signInForm.addEventListener('input', (e) =>{
     e.preventDefault();
-    if(name.value.length > 0 && 
-      email.value.length > 0 &&
+    if(email.value.length > 0 &&
       password.value.length >= 8) {
-          signUpBtn.removeAttribute('disabled');
-          signUpBtn.style.opacity = 1;
+          signInBtn.removeAttribute('disabled');
+          signInBtn.style.opacity = 1;
       } else {
-          signUpBtn.setAttribute('disabled', 'disabled');
+          signInBtn.setAttribute('disabled', 'disabled');
       }
 })
 
