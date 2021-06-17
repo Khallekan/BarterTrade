@@ -26,11 +26,11 @@ html {
   top: 0;
   left: 0;
   z-index: -1;
-  transition: transform 250ms ease-in;
-  // overflow: hidden;
+  overflow: hidden;
 }
 
 .carousel-item {
+  transition: transform 250ms ease-in;
   display: flex;
   flex-flow: column nowrap;
   justify-content: center;

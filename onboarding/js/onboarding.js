@@ -12,25 +12,21 @@ const setSlidePositon = (slide, index) => {
 slides.forEach(setSlidePositon);
 
 const setCarousel = (currentDot, targetDot, currentSlide, targetSlide) => {
-  carouselContainer.style.transform = `translateX(-${targetSlide.style.left})`;
-  // currentSlide.classList.remove('active');
-  // currentSlide.classList.add('inactive');
-  // targetSlide.classList.add('active');
-  // targetSlide.classList.remove('inactive');
   currentDot.classList.remove('active');
   targetDot.classList.add('active');
+  targetSlide.style.transform = `translateX(-${targetSlide.style.left})`;
+  currentSlide.style.transform = `translateX(-${targetSlide.style.left})`;
 };
 
 carouselNav.addEventListener('click', (e) => {
   const targetDot = e.target.closest('button');
   if (!targetDot) return;
   const currentDot = carouselNav.querySelector('.active');
-  const currentSlide = carouselContainer.querySelector('.active');
+  const currentIndex = carouselNavArr.findIndex((dot) => dot === currentDot);
+  const currentSlide = slides[currentIndex];
   const targetIndex = carouselNavArr.findIndex((dot) => dot === targetDot);
   const targetSlide = slides[targetIndex];
+  console.log(targetSlide);
   setCarousel(currentDot, targetDot, currentSlide, targetSlide);
-  // console.log(targetSlide);
   return;
 });
-
-// console.log(slideWidth);

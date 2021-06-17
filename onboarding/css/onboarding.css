@@ -79,13 +79,14 @@ html {
   top: 0;
   left: 0;
   z-index: -1;
+  overflow: hidden;
+}
+
+.carousel-item {
   -webkit-transition: -webkit-transform 250ms ease-in;
   transition: -webkit-transform 250ms ease-in;
   transition: transform 250ms ease-in;
   transition: transform 250ms ease-in, -webkit-transform 250ms ease-in;
-}
-
-.carousel-item {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
