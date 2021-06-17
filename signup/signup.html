@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+       <meta charset="UTF-8">
+       <title>Barter Trade Sign up</title>
+       <meta name="viewport" content="width=device-width, initial-scale=1.0">
+       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+       <link rel="stylesheet" href="../signup\css\signup.css">
+   </head>
+   <body>
+      <div class="wrapper">
+            <h2>Create an Account</h2>
+         <form class="sign-up-form">
+            <div class="name-box info-box">
+               <label for="name">Name</label>
+               <input type="text" id="name" name="name" placeholder="Enter name" required>
+            </div>
+            <div class="password-box info-box">
+                <label for="pass">Password</label>
+                <input type="password" class="togglePassword" id="pass" name="password" minlength="8" placeholder="Enter password" required>
+                <i class="far fa-eye-slash"  style="margin-left: -30px; cursor: pointer;"></i>
+             </div>
+            <div class="email-box info-box">
+               <label for="email">Email</label>
+               <input type="email" id="email" placeholder="Enter email address"  required>
+               <p>We’ll never share your email with anyone else</p>
+            </div> 
+            <!-- <div class="terms-box info-box"> -->
+                <input type="checkbox"  value="terms" id="terms">
+                <label for="terms" > I agree to the <a href="#">Terms</a> and <a href="#">conditions</a></label>
+            <!-- </div> -->
+            <input type="submit" class="sign-up-btn" disabled ="disabled" value="Sign up">
+         </form>
+         <div class="bottom-txt">
+            <p>By clicking the Sign Up button, you confirm that you accept our <a href="#">Terms of use</a> and <a href="#">Privacy Policy</a></p>
+            <p>Have an account? <a class="register" id="log-in" href="../signin\signin.html">Log in</a></p>
+         </div>
+      </div>
+      
+      <script src="../signup\js\signup.js"></script>
+   </body>
+</html>
