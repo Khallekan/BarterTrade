@@ -1,0 +1,129 @@
+body,
+html {
+  height: 100vh;
+  width: 100vw;
+}
+
+.carousel-wrapper {
+  position: relative;
+  display: flex;
+  flex-flow: column nowrap;
+  width: 100%;
+  height: 100%;
+  padding: 5rem 7vw 50%;
+}
+
+.logo {
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 6.5vw;
+}
+
+.carousel-container {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  transition: transform 250ms ease-in;
+  // overflow: hidden;
+}
+
+.carousel-item {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+  padding: 0 7vw;
+  position: absolute;
+  & > * {
+    background: transparent;
+    position: relative;
+    z-index: 1;
+  }
+  &.item_1 {
+    @include setOnboardingBackground($onboarding1mobile);
+  }
+  &.item_2 {
+    @include setOnboardingBackground($onboarding2mobile);
+  }
+  &.item_3 {
+    @include setOnboardingBackground($onboarding3mobile);
+    .user-login {
+      position: absolute;
+      bottom: 20vw;
+      width: 100%;
+      display: flex;
+      gap: 10%;
+      & > * {
+        font-size: 4vw;
+        width: 40%;
+        height: 15vw;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .sign-in {
+        background: $light-blue;
+        border-radius: 5px;
+      }
+    }
+  }
+  & &_header {
+    text-transform: capitalize;
+    font-size: 6.5vw;
+  }
+  & &_info {
+    font-size: 1.2rem;
+    margin-top: 4vw;
+  }
+}
+
+.carousel-nav {
+  margin-top: auto;
+  display: flex;
+  gap: 1rem;
+  .carousel-indicator {
+    transition: all 250ms ease-in;
+    background: $light-gray;
+    width: 0.5rem;
+    height: 0.5rem;
+    border-radius: 50%;
+    &.active {
+      flex-basis: 15vw;
+      border-radius: 10px;
+      background: $light-blue;
+    }
+  }
+}
+
+@media all and (min-width: 768px) {
+  .carousel-item {
+    &.item_3 {
+      .user-login {
+        bottom: 10vw;
+        & > * {
+          height: 12vw;
+          font-size: 3.5vw;
+        }
+      }
+    }
+    & &_header {
+      font-size: 7vw;
+    }
+    & &_info {
+      font-size: 5vw;
+    }
+  }
+  .carousel-nav {
+    .carousel-indicator {
+      width: 1rem;
+      height: 1rem;
+    }
+  }
+  .carousel-wrapper {
+    padding: 5rem 7vw 45%;
+  }
+}
