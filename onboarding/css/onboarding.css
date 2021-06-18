@@ -54,6 +54,7 @@ html {
 
 .carousel-wrapper {
   position: relative;
+  z-index: 1;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -156,9 +157,12 @@ html {
 }
 
 .carousel-item.item_3 .user-login > * {
-  font-size: 4vw;
   width: 40%;
   height: 15vw;
+}
+
+.carousel-item.item_3 .user-login > * a {
+  font-size: 4vw;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -168,6 +172,10 @@ html {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  height: 100%;
 }
 
 .carousel-item.item_3 .user-login .sign-in {
