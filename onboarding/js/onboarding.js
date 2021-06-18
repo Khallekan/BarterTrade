@@ -53,3 +53,9 @@ let changeAutomatically = setInterval(() => {
 const clear = () => {
   clearInterval(changeAutomatically);
 };
+
+const something = document.getElementById('something');
+
+something.addEventListener('click', () => {
+  console.log('click');
+});
