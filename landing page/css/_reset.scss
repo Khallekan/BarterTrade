@@ -29,11 +29,13 @@ button {
   border: none;
   font-size: inherit;
   text-transform: inherit;
+  cursor: pointer;
 }
 li {
   list-style: none;
 }
-svg {
+svg,
+path {
   width: 100%;
-  height: auto;
+  height: 100%;
 }

@@ -159,6 +159,9 @@ html {
     text-transform: capitalize;
     font-size: inherit;
     border-radius: 5px;
+    &:hover {
+      background: $light-blue;
+    }
   }
 }
 
@@ -166,12 +169,33 @@ html {
   display: flex;
   flex-flow: column nowrap;
   text-align: center;
-  padding: 2rem 5rem;
+  padding: 5vw 5vw;
   &-header {
-    font-size: 1.2rem;
+    font-size: 1.5rem;
   }
   &-brands {
     display: flex;
+    & > * {
+      flex: 25%;
+      height: 15vw;
+    }
+    .airbnb {
+      display: flex;
+      align-items: center;
+      svg {
+        flex: 30%;
+      }
+      span {
+        color: $airbnb;
+        font-size: 4rem;
+        flex: 70%;
+        font-family: 'Raleway', sans-serif;
+      }
+    }
+    .hotelsng {
+      display: flex;
+      width: 10%;
+    }
   }
 }
 

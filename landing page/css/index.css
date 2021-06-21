@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@500&display=swap");
 *,
 *::before,
 *::after {
@@ -57,15 +58,17 @@ button {
   border: none;
   font-size: inherit;
   text-transform: inherit;
+  cursor: pointer;
 }
 
 li {
   list-style: none;
 }
 
-svg {
+svg,
+path {
   width: 100%;
-  height: auto;
+  height: 100%;
 }
 
 body {
@@ -288,6 +291,10 @@ html {
   border-radius: 5px;
 }
 
+.hero-form .form-submit:hover {
+  background: #42baff;
+}
+
 .trusted {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -297,17 +304,55 @@ html {
       -ms-flex-flow: column nowrap;
           flex-flow: column nowrap;
   text-align: center;
-  padding: 2rem 5rem;
+  padding: 5vw 5vw;
 }
 
 .trusted-header {
-  font-size: 1.2rem;
+  font-size: 1.5rem;
 }
 
 .trusted-brands {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+}
+
+.trusted-brands > * {
+  -webkit-box-flex: 25%;
+      -ms-flex: 25%;
+          flex: 25%;
+  height: 15vw;
+}
+
+.trusted-brands .airbnb {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.trusted-brands .airbnb svg {
+  -webkit-box-flex: 30%;
+      -ms-flex: 30%;
+          flex: 30%;
+}
+
+.trusted-brands .airbnb span {
+  color: #ff5252;
+  font-size: 4rem;
+  -webkit-box-flex: 70%;
+      -ms-flex: 70%;
+          flex: 70%;
+  font-family: 'Raleway', sans-serif;
+}
+
+.trusted-brands .hotelsng {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 10%;
 }
 
 @media only screen and (min-width: 768.1px) {
@@ -318,7 +363,7 @@ html {
     display: none;
   }
   .nav-container {
-    padding: 1rem 5rem 0;
+    padding: 3rem 5rem 0;
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
