@@ -1,0 +1,7 @@
+@function changeColor($background) {
+  @if (lightness($background) < 50%) {
+    @return $white;
+  } @else {
+    @return $primary-blue;
+  }
+}

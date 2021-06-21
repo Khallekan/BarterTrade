@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;800&display=swap');
+
+*,
+*::before,
+*::after {
+  font-family: 'Inter', sans-serif;
+}
+
+body {
+  font-weight: 400;
+}
+
+.logo {
+  font-weight: 800;
+}
+
+button,
+.nav-wrapper,
+.trusted-header,
+.hero-txt {
+  font-weight: 500;
+}
+
+.hero-header {
+  font-weight: 600;
+}
