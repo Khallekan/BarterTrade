@@ -1,0 +1,131 @@
+@media only screen and (min-width: 768.1px) {
+  body {
+    background: linear-gradient(135deg, $very-light-gray, hsl(0, 0%, 99%));
+  }
+
+  .mobile-menu {
+    display: none;
+  }
+
+  .nav-container {
+    padding: 3rem 5rem 0;
+    justify-content: space-between;
+  }
+
+  .nav-logo {
+    flex: 0.5;
+    font-size: 1.5rem;
+  }
+
+  .nav-logo {
+    align-items: center;
+  }
+
+  .nav-wrapper {
+    display: flex;
+    height: fit-content;
+    width: fit-content;
+    background: transparent;
+    position: static;
+    flex: 2;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    font-size: 1rem;
+    padding: 0;
+  }
+
+  .nav-links ul,
+  .nav-btns {
+    gap: 2rem;
+  }
+  .nav-links {
+    color: $primary-black;
+    & &__link:hover {
+      color: $primary-blue;
+    }
+    & ul {
+      flex-flow: row nowrap;
+    }
+  }
+  .nav-btns {
+    flex-flow: row nowrap;
+    justify-content: flex-end;
+    & &__btn {
+      min-width: 80px;
+      width: 45%;
+      max-width: 120px;
+      padding: 1rem 0;
+      border-radius: 5px;
+      &.sign-up {
+        background: $primary-blue;
+        border: 1px solid $primary-blue;
+      }
+    }
+  }
+
+  .hero {
+    flex-flow: row nowrap;
+    gap: 0;
+    padding: 5rem 5rem 0;
+  }
+
+  .hero-wrapper {
+    position: relative;
+    height: auto;
+    flex: 55%;
+    padding: 0;
+    text-align: left;
+    gap: 1rem;
+    padding: 2rem 2rem 10%;
+    justify-content: center;
+  }
+  .hero-header {
+    width: 80%;
+    font-size: 2.5rem;
+  }
+  .hero-txt {
+    width: 75%;
+    font-size: 1rem;
+  }
+  .hero-img {
+    flex: 45%;
+    order: 1;
+    padding: 0;
+    min-height: 28rem;
+    max-height: 35rem;
+    overflow: hidden;
+    border-radius: 10px;
+  }
+  .hero-form {
+    position: absolute;
+    bottom: 17%;
+    height: 13%;
+    width: 70%;
+    font-size: 1rem;
+    margin: 0;
+  }
+  .trusted {
+    padding: 5rem 5rem 0;
+    &-header {
+      font-size: 1.7rem;
+    }
+    &-brands {
+      flex-flow: row nowrap;
+      gap: 0.5rem;
+      & > * {
+        width: 100%;
+      }
+      .airbnb {
+        svg {
+          padding: 0;
+          flex: 20%;
+        }
+        span {
+          font-size: 3rem;
+          text-align: center;
+          font-weight: 700;
+        }
+      }
+    }
+  }
+}
