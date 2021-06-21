@@ -81,9 +81,9 @@ html {
     }
     &.login:hover,
     &.sign-up:hover {
-      background: $primary-black;
+      background: $light-blue;
       color: changeColor($primary-black);
-      border: 1px solid $primary-black;
+      border: 1px solid $light-blue;
     }
   }
 }
@@ -169,32 +169,36 @@ html {
   display: flex;
   flex-flow: column nowrap;
   text-align: center;
-  padding: 5vw 5vw;
+  padding: 5vw 5vw 0;
   &-header {
-    font-size: 1.5rem;
+    font-size: 5vw;
   }
   &-brands {
     display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
     & > * {
       flex: 25%;
-      height: 15vw;
+      width: 60%;
     }
     .airbnb {
       display: flex;
       align-items: center;
       svg {
         flex: 30%;
+        padding: 1vw;
       }
       span {
         color: $airbnb;
-        font-size: 4rem;
+        font-size: 9vw;
         flex: 70%;
         font-family: 'Raleway', sans-serif;
+        text-align: left;
+        font-weight: 700;
       }
     }
     .hotelsng {
       display: flex;
-      width: 10%;
     }
   }
 }

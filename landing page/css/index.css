@@ -187,9 +187,9 @@ html {
 }
 
 .nav-btns .nav-btns__btn.login:hover, .nav-btns .nav-btns__btn.sign-up:hover {
-  background: #16161d;
+  background: #42baff;
   color: white;
-  border: 1px solid #16161d;
+  border: 1px solid #42baff;
 }
 
 .mobile-menu {
@@ -304,24 +304,31 @@ html {
       -ms-flex-flow: column nowrap;
           flex-flow: column nowrap;
   text-align: center;
-  padding: 5vw 5vw;
+  padding: 5vw 5vw 0;
 }
 
 .trusted-header {
-  font-size: 1.5rem;
+  font-size: 5vw;
 }
 
 .trusted-brands {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .trusted-brands > * {
   -webkit-box-flex: 25%;
       -ms-flex: 25%;
           flex: 25%;
-  height: 15vw;
+  width: 60%;
 }
 
 .trusted-brands .airbnb {
@@ -337,22 +344,24 @@ html {
   -webkit-box-flex: 30%;
       -ms-flex: 30%;
           flex: 30%;
+  padding: 1vw;
 }
 
 .trusted-brands .airbnb span {
   color: #ff5252;
-  font-size: 4rem;
+  font-size: 9vw;
   -webkit-box-flex: 70%;
       -ms-flex: 70%;
           flex: 70%;
   font-family: 'Raleway', sans-serif;
+  text-align: left;
+  font-weight: 700;
 }
 
 .trusted-brands .hotelsng {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: 10%;
 }
 
 @media only screen and (min-width: 768.1px) {
@@ -490,5 +499,32 @@ html {
     width: 70%;
     font-size: 1rem;
     margin: 0;
+  }
+  .trusted {
+    padding: 5rem 5rem 0;
+  }
+  .trusted-header {
+    font-size: 1.7rem;
+  }
+  .trusted-brands {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row nowrap;
+            flex-flow: row nowrap;
+    gap: 0.5rem;
+  }
+  .trusted-brands > * {
+    width: 100%;
+  }
+  .trusted-brands .airbnb svg {
+    padding: 0;
+    -webkit-box-flex: 20%;
+        -ms-flex: 20%;
+            flex: 20%;
+  }
+  .trusted-brands .airbnb span {
+    font-size: 3rem;
+    text-align: center;
+    font-weight: 700;
   }
 }
