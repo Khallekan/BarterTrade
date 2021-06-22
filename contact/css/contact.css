@@ -8,13 +8,15 @@ body {
     padding: 0;
     margin: 0;
     font-family: 'Inter', sans-serif;
+    color: #16161d;
 }
 
-.wrapper {
+/* .wrapper {
     padding: 77px 120px;
-}
+} */
 
 header {
+    padding: 77px 120px;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -22,6 +24,8 @@ header {
 
 .logo {
     font-size: 24px;
+    position: relative;
+    z-index: 111;
 }
 
 .logo span {
@@ -63,6 +67,15 @@ header {
     border-bottom: 1px solid #087DC0;
 }
 
+.nav .active {
+    color: #087DC0;
+}
+
+/* .register button {
+    width: 150px;
+    height: 55px;
+} */
+
 .register button:first-child {
     padding: 18px 50px;
     color: #087dc0;
@@ -85,7 +98,7 @@ header {
     background: #087dc0;
     border: 1px solid;
     border-radius: 4px;
-    transition: all .4s ease-in-out;
+    transition: background .4s ease-in-out;
 }
 
 .register button:nth-child(2):hover {
@@ -93,28 +106,298 @@ header {
     background: #fff;
 }
 
+main {
+    padding: 77px 120px;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 105px;
+}
+
+.main-img {
+    flex: 1;
+}
+
+.main-img img {
+    width: 100%;
+    height: 100%;
+}
+
+.send-msg {
+    flex: 1;
+    margin-left: 165px;
+}
+
+.info-box {
+    margin-top: 24px;
+    display: flex;
+    flex-direction: column;
+}
+
+.info-box:first-child {
+    margin-top: 47px;
+}
+
+.info-box label {
+padding-bottom: 8px;
+}
+
+.info-box input {
+background: #f9f9f9;
+border: none;
+border-radius: 4px;
+margin-top: 8px;
+padding-left: 8px;
+height: 56px;
+width: 100%;
+font-size: 1rem;
+outline-color: #087DC0 ;
+}
+
+.message-box #message {
+height: 212px;
+}
+
+input #message::placeholder {
+    /* text-align: start; */
+}
+
+form button {
+width: 100%;
+height: 60px;
+background: #087DC0;
+color: #fff;
+border: 1px solid;
+border-radius: 4px;
+margin-top: 46px;
+}
+
+.contact-us {
+    padding: 77px 120px;
+    margin-top: 100px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.cont-comps {
+    margin-top: 64px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.contact-us h2, .news-txt h2 {
+    font-weight: 500;
+}
+
+.newsletter {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #087DC0;
+    color: #fff;
+    padding: 54px 120px;
+}
+
+.news-txt {
+    flex: 2;
+}
+
+.news-form {
+    flex: 1;
+    position: relative;
+}
+.news-form input {
+    width: 100%;
+    height: 63px;
+    position: relative;
+    border: 1px solid #fff;
+    outline: none;
+    border-radius: 4px;
+}
+
+.news-form label {
+    position: absolute;
+    top: 8%;
+    right: 21%;
+}
+
+.news-form label button {
+    padding: 28% 54%;
+    background-color: #087DC0;
+    color: #fff;
+    border: 1px solid;
+    border-radius: 4px;
+}
+
+footer {
+    position: relative;
+    background: #121212;
+    color: #fff;
+}
+
+.footer-contents {
+    display: flex;
+    justify-content: space-between;
+    padding: 80px 120px;
+   
+}
+
+.ft-blk {
+    flex: 1;
+    align-items: center;
+}
+
+.ft-blk h2 {
+    font-weight: 500;
+}
+
+.contact-mail::before {
+    content: "";
+    background: url('/contact/img/c-mail.png') no-repeat center/cover;
+    top: 0;
+    left: 0;
+    height: 20px;
+    width: 20px;
+    padding:0 10px;
+    margin-right: 20px;
+}
+
+.contact-tel::before {
+    content: "";
+    background: url('/contact/img/tel.png') no-repeat center/cover;
+    top: 0;
+    left: 0;
+    height: 20px;
+    width: 20px;
+    padding:0 10px;
+    margin-right: 20px;
+}
+
+.contact-add::before {
+    content: "";
+    background: url('/contact/img/location.png');
+    top: 0;
+    left: 0;
+    height: 20px;
+    width: 20px;
+    padding:0 10px;
+    margin-right: 20px;
+}
+
+.app {
+    display: flex;
+    flex-direction: column;
+}
+
+.app img:nth-of-type(1) {
+    margin-bottom: 40px;
+}
+
+
+
+.footer-contents li {
+    list-style: none;
+    margin-top: 32px;
+}
+
+.footer-contents li a {
+    color: #fff;
+    text-decoration: none;
+    
+}
+
+.foot-notes {
+    display: flex;
+    padding: 0 120px 48px;
+    font-size: 12px;
+}
+
+.foot-notes p {
+    flex: 1;
+}
+
+.quick-lk{
+    padding: 0;
+}
+
+.go-up {
+    width: 40px;
+    height: 40px;
+    background: #fff;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.go-up img {
+    position: absolute;
+    left: 36.52%;
+    right: 11.45%;
+    top: 38.74%;
+}
+
+
+
 @media screen and (max-width: 1380px) {
     
-    .wrapper {
+    header {
         padding: 45px 80px;
+    }
+
+    main {
+        padding: 45px 80px;
+    }
+
+    .contact-us {
+        padding: 45px 80px;
+    }
+
+    .newsletter {
+        padding: 45px 80px;
+    }
+
+    .footer-contents {
+        padding: 80px 80px 0;
+    }
+
+    .foot-notes {
+        padding: 80px 80px 40px;
     }
 }
 
-@media screen and (max-width: 1230px) {
+@media screen and (max-width: 1245px) {
     
-    .wrapper {
+    header {
         padding: 45px 50px;
+    }
+
+    main {
+        padding: 45px 50px;
+    }
+
+    .contact-us {
+        padding: 45px 50px;
+    }
+
+    .newsletter {
+        padding: 45px 50px;
+    }
+
+    .footer-contents {
+        padding: 45px 50px 0;
     }
 
     .desktop-nav {
         gap: 100px;
     }
+
+    .foot-notes {
+        padding: 50px 50px 40px;
+    }
+
 }
 
-@media screen and (max-width: 1080px) {
-    .wrapper {
-        padding: 45px 50px;
-    }
+@media screen and (max-width: 1130px) {
 
     .desktop-nav {
         gap: 60px;
@@ -123,15 +406,42 @@ header {
     .nav {
         gap: 30px;
     }
+
+    .send-msg {
+        margin-left: 80px;
+    }
+
 }
 
 
 
-@media screen and (max-width: 968px) {
+@media screen and (max-width: 989px) {
     
-    .wrapper{
+    header {
         padding: 40px;
     }
+
+    main {
+        padding: 40px;
+    }
+
+    .contact-us {
+        padding: 40px;
+    }
+
+    .newsletter {
+        padding: 40px;
+    }
+
+    .footer-contents {
+        padding: 40px 40px 0;
+    }
+
+    .foot-notes {
+        padding: 40px;
+    }
+
+    
     .desktop-nav  {
         gap: 50px;
     }
@@ -141,13 +451,14 @@ header {
         padding: 18px 35px;
     }
 
+
 }
 
-@media screen and (max-width: 898px) and (min-width: 800px) {
+@media screen and (max-width: 950px) and (min-width: 800px) {
     
 
     .desktop-nav  {
-        gap: 20px ;
+        gap: 18px ;
     }
 
     .nav {
@@ -160,16 +471,28 @@ header {
 @media screen and (max-width: 800px) {
     
     .desktop-nav  {
-        gap: 26px ;
+        gap: 12px ;
     }
 
     .nav {
-        gap: 16px;
+        gap: 10px;
     }
 
     .register button:first-child, 
     .register button:nth-child(2){
-        padding: 18px 25px;
+        padding: 18px 22px;
+    }
+
+    .newsletter {
+        padding: 40px;
+    }
+
+    .footer-contents {
+        padding: 40px;
+    }
+
+    .foot-notes {
+        padding: 40px;
     }
     
 }
@@ -177,7 +500,7 @@ header {
 
 @media screen and (max-width: 767px) {
     
-    .wrapper {
+    header {
         padding: 20px;
     }
 
@@ -223,9 +546,11 @@ header {
     .visible {
         display: flex;
         flex-direction: column;
+        background-color: #fff;
         position: absolute;
         top: 10%;
         width: 100%;
+        margin-top: 45px;
         padding: 10px 25px;
         /* right: 0; */
         right: -100px;
@@ -237,4 +562,36 @@ header {
         100%{transform: translateX(-100px); opacity: 1;}
     }
 
+
+    main {
+        flex-direction: column;
+    }
+
+    .send-msg {
+        margin-left: 0;
+    }
+
+    .cont-comps {
+        grid-template-columns: 1fr;
+        grid-gap: 40px;
+    }
+
+    .newsletter {
+        flex-direction: column;
+        padding: 40px;
+    }
+
+    .app {
+        align-items: flex-start;
+    }
+
+    .footer-contents {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .foot-notes {
+        flex-direction: column;
+        padding: 20px;
+    }
 }
