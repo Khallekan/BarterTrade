@@ -106,6 +106,7 @@
   }
   .trusted {
     padding: 5rem 5rem 0;
+    gap: 3rem;
     &-header {
       font-size: 1.7rem;
     }
@@ -123,9 +124,254 @@
         span {
           font-size: 3rem;
           text-align: center;
-          font-weight: 700;
         }
       }
     }
+  }
+  .mech {
+    padding: 5rem 5rem 0;
+    gap: 3rem;
+    &-header {
+      font-size: 1.7rem;
+    }
+    &-wrapper {
+      flex-flow: row nowrap;
+      gap: 5rem;
+      .mech-container {
+        height: 17rem;
+        &__img {
+          span {
+            width: 4rem;
+            height: 4rem;
+          }
+        }
+        &__info {
+          gap: 1.5rem;
+          &-header,
+          &-txt {
+            font-size: 1rem;
+          }
+        }
+      }
+    }
+  }
+  .reasons {
+    padding: 5rem 5rem 0;
+    gap: 3rem;
+    &-header {
+      font-size: 1.7rem;
+    }
+    &-wrapper {
+      flex-flow: row nowrap;
+      gap: 5rem;
+      .reasons-container {
+        height: 17rem;
+        &__img {
+          span {
+            width: 4rem;
+            height: 4rem;
+          }
+        }
+        &__info {
+          gap: 1.5rem;
+          &-header,
+          &-txt {
+            font-size: 1rem;
+          }
+        }
+      }
+    }
+  }
+  .categories {
+    padding: 5rem 5rem 0;
+    gap: 3rem;
+    &-header {
+      font-size: 1.7rem;
+    }
+    &-wrapper {
+      grid-template-columns: repeat(4, 1fr);
+      gap: 2rem;
+    }
+    .categories-container {
+      padding: 3rem 0;
+      .category-name,
+      .category-number {
+        font-size: 1rem;
+      }
+    }
+  }
+
+  .reviews {
+    padding: 5rem 5rem 0;
+    gap: 3rem;
+    &-header {
+      font-size: 1.7rem;
+    }
+    &-wrapper {
+      flex-flow: row nowrap;
+      gap: 1.5rem;
+    }
+    .review-container {
+      flex: 50%;
+      border: 7px solid transparent;
+      height: 17rem;
+      padding: 0 2%;
+      .review-info {
+        font-size: 1.05rem;
+      }
+      .review-user {
+        height: 7rem;
+        &__img {
+          width: 4rem;
+          height: 4rem;
+        }
+        &__name {
+          font-size: 1rem;
+        }
+      }
+      &:hover {
+        border-left: 7px solid $primary-blue;
+      }
+    }
+  }
+  .newsletter {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #087dc0;
+    color: #fff;
+    padding: 54px 120px;
+  }
+  .news-txt {
+    flex: 2;
+  }
+
+  .news-form {
+    flex: 1;
+    position: relative;
+  }
+  .news-form input {
+    width: 100%;
+    height: 63px;
+    position: relative;
+    border: 1px solid #fff;
+    outline: none;
+    border-radius: 4px;
+  }
+
+  .news-form label {
+    position: absolute;
+    top: 0%;
+    right: 0%;
+  }
+
+  .news-form label button {
+    padding: 28% 54%;
+    background-color: #087dc0;
+    color: #fff;
+    border: 1px solid;
+    border-radius: 4px;
+  }
+  footer {
+    position: relative;
+    background: #121212;
+    color: #fff;
+  }
+
+  .footer-contents {
+    display: flex;
+    justify-content: space-between;
+    padding: 80px 120px;
+  }
+
+  .ft-blk {
+    flex: 1;
+    align-items: center;
+  }
+
+  .ft-blk h2 {
+    font-weight: 500;
+  }
+
+  .contact-mail::before {
+    content: '';
+    background: url('/contact/img/c-mail.png') no-repeat center/cover;
+    top: 0;
+    left: 0;
+    height: 20px;
+    width: 20px;
+    padding: 0 10px;
+    margin-right: 20px;
+  }
+
+  .contact-tel::before {
+    content: '';
+    background: url('/contact/img/tel.png') no-repeat center/cover;
+    top: 0;
+    left: 0;
+    height: 20px;
+    width: 20px;
+    padding: 0 10px;
+    margin-right: 20px;
+  }
+
+  .contact-add::before {
+    content: '';
+    background: url('/contact/img/location.png');
+    top: 0;
+    left: 0;
+    height: 20px;
+    width: 20px;
+    padding: 0 10px;
+    margin-right: 20px;
+  }
+
+  .app {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .app img:nth-of-type(1) {
+    margin-bottom: 40px;
+  }
+
+  .footer-contents li {
+    list-style: none;
+    margin-top: 32px;
+  }
+
+  .footer-contents li a {
+    color: #fff;
+    text-decoration: none;
+  }
+
+  .foot-notes {
+    display: flex;
+    padding: 0 120px 48px;
+    font-size: 12px;
+  }
+
+  .foot-notes p {
+    flex: 1;
+  }
+
+  .quick-lk {
+    padding: 0;
+  }
+
+  .go-up {
+    width: 40px;
+    height: 40px;
+    background: #fff;
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+
+  .go-up img {
+    position: absolute;
+    left: 36.52%;
+    right: 11.45%;
+    top: 38.74%;
   }
 }
