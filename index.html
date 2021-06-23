@@ -8,8 +8,10 @@
     <title>Bartertrade</title>
   </head>
   <body>
-    <header class="nav-container">
-      <h1 class="nav-logo"><span>b</span>artertrade</h1>
+    <header class="nav-container" id="top">
+      <h1 class="nav-logo">
+        <a href="./index.html"><span>b</span>artertrade</a>
+      </h1>
       <div class="nav-wrapper" id="nav">
         <nav class="nav-links">
           <ul>
@@ -392,7 +394,34 @@
               />
             </div>
             <p class="review-user__name">Andre Lucas Herderson</p>
-            <div class="review-user__rating"></div>
+            <div class="review-user__rating">
+              <svg
+                viewBox="0 0 116 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M12 0L14.6942 8.2918H23.4127L16.3593 13.4164L19.0534 21.7082L12 16.5836L4.94658 21.7082L7.64074 13.4164L0.587322 8.2918H9.30583L12 0Z"
+                  fill="#DFD600"
+                />
+                <path
+                  d="M35 0L37.6942 8.2918H46.4127L39.3593 13.4164L42.0534 21.7082L35 16.5836L27.9466 21.7082L30.6407 13.4164L23.5873 8.2918H32.3058L35 0Z"
+                  fill="#DFD600"
+                />
+                <path
+                  d="M58 0L60.6942 8.2918H69.4127L62.3593 13.4164L65.0534 21.7082L58 16.5836L50.9466 21.7082L53.6407 13.4164L46.5873 8.2918H55.3058L58 0Z"
+                  fill="#DFD600"
+                />
+                <path
+                  d="M83 0L85.6942 8.2918H94.4127L87.3593 13.4164L90.0534 21.7082L83 16.5836L75.9466 21.7082L78.6407 13.4164L71.5873 8.2918H80.3058L83 0Z"
+                  fill="#DFD600"
+                />
+                <path
+                  d="M104 0L106.694 8.2918H115.413L108.359 13.4164L111.053 21.7082L104 16.5836L96.9466 21.7082L99.6407 13.4164L92.5873 8.2918H101.306L104 0Z"
+                  fill="#DFD600"
+                />
+              </svg>
+            </div>
           </div>
         </div>
         <div class="review-container">
@@ -409,12 +438,39 @@
               />
             </div>
             <p class="review-user__name">Andre Lucas Herderson</p>
-            <div class="review-user__rating"></div>
+            <div class="review-user__rating">
+              <svg
+                viewBox="0 0 116 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M12 0L14.6942 8.2918H23.4127L16.3593 13.4164L19.0534 21.7082L12 16.5836L4.94658 21.7082L7.64074 13.4164L0.587322 8.2918H9.30583L12 0Z"
+                  fill="#DFD600"
+                />
+                <path
+                  d="M35 0L37.6942 8.2918H46.4127L39.3593 13.4164L42.0534 21.7082L35 16.5836L27.9466 21.7082L30.6407 13.4164L23.5873 8.2918H32.3058L35 0Z"
+                  fill="#DFD600"
+                />
+                <path
+                  d="M58 0L60.6942 8.2918H69.4127L62.3593 13.4164L65.0534 21.7082L58 16.5836L50.9466 21.7082L53.6407 13.4164L46.5873 8.2918H55.3058L58 0Z"
+                  fill="#DFD600"
+                />
+                <path
+                  d="M83 0L85.6942 8.2918H94.4127L87.3593 13.4164L90.0534 21.7082L83 16.5836L75.9466 21.7082L78.6407 13.4164L71.5873 8.2918H80.3058L83 0Z"
+                  fill="#DFD600"
+                />
+                <path
+                  d="M104 0L106.694 8.2918H115.413L108.359 13.4164L111.053 21.7082L104 16.5836L96.9466 21.7082L99.6407 13.4164L92.5873 8.2918H101.306L104 0Z"
+                  fill="#DFD600"
+                />
+              </svg>
+            </div>
           </div>
         </div>
       </div>
     </section>
-    <div class="newsletter">
+    <label for="email" class="newsletter">
       <div class="news-txt">
         <h2>Subscribe to our Newsletter</h2>
         <p>
@@ -422,30 +478,32 @@
           BarterTrade
         </p>
       </div>
-      <div class="news-form">
+      <form class="news-form">
         <input type="email" id="email" placeholder="Enter address" required />
-        <label for="email"><button type="button">Subscribe</button></label>
-      </div>
-    </div>
+        <button type="button">Subscribe</button>
+      </form>
+    </label>
     <footer>
       <div class="footer-contents">
-        <div class="ft-blk">
-          <h1 class="logo"><span>B</span>arterTrade</h1>
+        <div class="ft-blk flex2">
+          <h1 class="logo">
+            <a href="./index.html"><span>B</span>arterTrade</a>
+          </h1>
           <p>
             Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet
             sint. Velit officia consequat duis enim velit mollit.
           </p>
         </div>
-        <div class="ft-blk">
+        <div class="ft-blk flex1">
           <h2>Quick Links</h2>
           <ul class="quick-lk">
-            <li><a href="#">home</a></li>
+            <li><a href="./index.html">Home</a></li>
             <li><a href="#">About Us</a></li>
             <li><a href="#">Trade</a></li>
           </ul>
         </div>
-        <div class="ft-blk">
-          <h2>Contact Us</h2>
+        <div class="ft-blk flex2">
+          <h2><a href="./contact/contact.html">Contact Us</a></h2>
           <ul class="quick-lk">
             <li class="contact-mail">
               <a href="#">nathan.roberts@example.com</a>
@@ -456,10 +514,16 @@
             </li>
           </ul>
         </div>
-        <div class="ft-blk app">
+        <div class="ft-blk app flex1">
           <h3>Install Apps</h3>
-          <img src="../contact\img\google-play.png" alt="" />
-          <img src="../contact\img\app-store.png" alt="" />
+          <div>
+            <a href="#">
+              <img src="../contact\img\google-play.png" alt="" />
+            </a>
+            <a href="#">
+              <img src="../contact\img\app-store.png" alt="" />
+            </a>
+          </div>
         </div>
       </div>
       <div class="foot-notes">
@@ -468,7 +532,16 @@
       </div>
       <a href="#top"
         ><div class="go-up">
-          <img src="../contact/img/go-up.png" alt="" />
+          <svg
+            viewBox="0 0 14 8"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M7.00001 2.82808L2.05001 7.77808L0.636013 6.36408L7.00001 7.62939e-05L13.364 6.36408L11.95 7.77808L7.00001 2.82808Z"
+              fill="#087DC0"
+            />
+          </svg>
         </div>
       </a>
     </footer>
