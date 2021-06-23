@@ -202,7 +202,7 @@
   }
 
   .reviews {
-    padding: 5rem 5rem 0;
+    padding: 5rem;
     gap: 3rem;
     &-header {
       font-size: 1.7rem;
@@ -221,6 +221,7 @@
       }
       .review-user {
         height: 7rem;
+        gap: 0.5rem;
         &__img {
           width: 4rem;
           height: 4rem;
@@ -235,143 +236,102 @@
     }
   }
   .newsletter {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #087dc0;
-    color: #fff;
-    padding: 54px 120px;
+    padding: 5rem 5rem;
+    flex-flow: row nowrap;
+    gap: 2rem;
+    text-align: left;
   }
   .news-txt {
-    flex: 2;
+    flex: 60%;
+    h2 {
+      font-size: 1.5rem;
+    }
+    p {
+      font-size: 1.1rem;
+    }
   }
-
   .news-form {
-    flex: 1;
-    position: relative;
-  }
-  .news-form input {
-    width: 100%;
-    height: 63px;
-    position: relative;
-    border: 1px solid #fff;
-    outline: none;
-    border-radius: 4px;
+    flex: 40%;
+    width: 80%;
+    height: 5rem;
+    font-size: 1.1rem;
   }
 
-  .news-form label {
-    position: absolute;
-    top: 0%;
-    right: 0%;
-  }
-
-  .news-form label button {
-    padding: 28% 54%;
-    background-color: #087dc0;
-    color: #fff;
-    border: 1px solid;
-    border-radius: 4px;
-  }
   footer {
-    position: relative;
-    background: #121212;
-    color: #fff;
+    padding: 5rem;
   }
-
   .footer-contents {
-    display: flex;
-    justify-content: space-between;
-    padding: 80px 120px;
+    flex-flow: row nowrap;
+    text-align: left;
+    gap: 0;
   }
-
   .ft-blk {
-    flex: 1;
-    align-items: center;
+    gap: 2rem;
+    p {
+      width: 80%;
+      font-size: 1rem;
+    }
   }
-
-  .ft-blk h2 {
+  .ft-blk .logo {
+    font-size: 1.7rem;
+  }
+  .ft-blk h2,
+  .ft-blk h3 {
+    font-size: 1rem;
     font-weight: 500;
   }
-
-  .contact-mail::before {
-    content: '';
-    background: url('/contact/img/c-mail.png') no-repeat center/cover;
-    top: 0;
-    left: 0;
-    height: 20px;
-    width: 20px;
-    padding: 0 10px;
-    margin-right: 20px;
-  }
-
-  .contact-tel::before {
-    content: '';
-    background: url('/contact/img/tel.png') no-repeat center/cover;
-    top: 0;
-    left: 0;
-    height: 20px;
-    width: 20px;
-    padding: 0 10px;
-    margin-right: 20px;
-  }
-
-  .contact-add::before {
-    content: '';
-    background: url('/contact/img/location.png');
-    top: 0;
-    left: 0;
-    height: 20px;
-    width: 20px;
-    padding: 0 10px;
-    margin-right: 20px;
-  }
-
-  .app {
+  .quick-lk {
     display: flex;
-    flex-direction: column;
+    flex-flow: column nowrap;
+    gap: 2rem;
+    & li {
+      font-size: 0.85rem;
+    }
   }
-
-  .app img:nth-of-type(1) {
-    margin-bottom: 40px;
+  .contact-mail,
+  .contact-tel,
+  .contact-add {
+    width: 100%;
+    margin: 0 auto;
+    text-align: left;
+    font-size: 1rem;
   }
-
-  .footer-contents li {
-    list-style: none;
-    margin-top: 32px;
+  .contact-mail::before,
+  .contact-tel::before,
+  .contact-add::before {
+    height: 2rem;
+    width: 2rem;
+    padding: 0 10px;
+    margin-right: 1rem;
   }
-
-  .footer-contents li a {
-    color: #fff;
-    text-decoration: none;
+  .app {
+    div {
+      flex-flow: column nowrap;
+      gap: 1rem;
+    }
   }
 
   .foot-notes {
-    display: flex;
-    padding: 0 120px 48px;
-    font-size: 12px;
+    flex-flow: row nowrap;
+    font-size: 1rem;
+    margin-top: 2rem;
+    text-align: left;
+    gap: 0;
   }
-
   .foot-notes p {
-    flex: 1;
-  }
-
-  .quick-lk {
-    padding: 0;
+    flex: 50%;
   }
 
   .go-up {
-    width: 40px;
-    height: 40px;
-    background: #fff;
-    position: absolute;
-    top: 0;
-    right: 0;
+    width: 2.5rem;
+    height: 2.5rem;
+    padding: 0.5%;
   }
 
-  .go-up img {
-    position: absolute;
-    left: 36.52%;
-    right: 11.45%;
-    top: 38.74%;
+  .flex2 {
+    flex: 2;
+  }
+  .flex1 {
+    flex: 1;
   }
 }
