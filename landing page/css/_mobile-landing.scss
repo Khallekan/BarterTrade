@@ -46,6 +46,20 @@ html {
   text-align: center;
   display: none;
 }
+.visible {
+  display: flex;
+  left: 100px;
+  animation: slide 0.5s ease-in-out forwards;
+}
+@keyframes slide {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(-100px);
+    opacity: 1;
+  }
+}
 
 .nav-links ul,
 .nav-btns {
