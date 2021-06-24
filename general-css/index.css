@@ -403,7 +403,7 @@ footer {
   -webkit-box-direction: normal;
   -ms-flex-flow: column nowrap;
   flex-flow: column nowrap;
-  gap: 3vw;
+  gap: 7vw;
 }
 
 .ft-blk p {
@@ -432,7 +432,7 @@ footer {
   -webkit-box-direction: normal;
   -ms-flex-flow: column nowrap;
   flex-flow: column nowrap;
-  gap: 3vw;
+  gap: 6vw;
 }
 
 .quick-lk li {
