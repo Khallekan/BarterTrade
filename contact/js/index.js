@@ -1,16 +1,21 @@
-const mobileView = document.querySelector('.mobile-nav');
-const openNav = document.querySelector('#open-nav');
-const closeNav = document.querySelector('#close-nav');
+const mobileView = document.querySelector('.mobile-menu');
+const mobileMenu = document.querySelector('#nav');
+// const closeNav = document.querySelector('#close-nav');
 
+let visible = false;
 
-openNav.addEventListener('click', () =>{
-    mobileView.classList.add('visible');
-    openNav.style.display = 'none';
-    closeNav.style.display = 'block';
+mobileView.addEventListener('click', () => {
+  if (!visible) {
+    mobileMenu.classList.add('visible');
+    visible = true;
+    return;
+  }
+  visible = false;
+  mobileMenu.classList.remove('visible');
+  return;
 });
 
-closeNav.addEventListener('click', () =>{
-    mobileView.classList.remove('visible');
-    closeNav.style.display = 'none';
-    openNav.style.display = 'block';
-});
+// closeNav.addEventListener('click', () =>{
+//     closeNav.style.display = 'none';
+//     openNav.style.display = 'block';
+// });
