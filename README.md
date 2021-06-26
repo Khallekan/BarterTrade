@@ -1,7 +1,5 @@
 # BarterTrade-FE-PJT-23 - BarterTrade
 
-![Design preview for the BarterTrade landing page](./landing-page/landing-page.jpg)
-
 ## Welcome! 👋
 
 ## Get to know us
