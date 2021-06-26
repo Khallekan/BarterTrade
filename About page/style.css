@@ -1,47 +1,62 @@
-.content-header {
-  left: 120px;
-  font-style: normal;
-  font-weight: 500;
-  font-size: 36px;
-  line-height: 44px;
-  letter-spacing: 0.02em;
-  color: #000000;
-}
-
-.content-p {
-  /* position: absolute;  */ /*This line is not needed*/
+main {
+  display: flex;
+  flex-direction: column;
+  padding: 3rem 5rem 3rem;
   color: #696969;
-  font-size: 24px;
+}
+
+.main-head {
+  align-self: center;
+  margin: 24px 0;
+  color: #000;
+  font-weight: 500;
+}
+
+.txt-bx {
+  width: 100%;
+  background: #fff;
+  padding: 2rem;
+  border-radius: 4px;
+  box-shadow: 5px 4px 12px rgba(8, 125, 192, 0.25);
+  line-height: 29.05px;
+  margin-bottom: 26px;
+}
+
+.txt-bx p + p {
+  margin-top: 26px;
+}
+
+.bold {
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.values-head {
+  text-align: center;
+  margin-bottom: 48px;
   font-weight: normal;
-  font-style: normal;
-  line-height: 29px;
-  align-items: center;
 }
 
-/*flexbox
-.flex {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+.value-txt {
+  width: 100%;
+  background: #fff;
+  padding: 2rem;
+  border-radius: 4px;
+  box-shadow: 5px 4px 12px rgba(8, 125, 192, 0.25);
+  line-height: 29.05px;
+  margin-bottom: 26px;
 }
 
-.fotter-b {
-    background-color: #121212;
-    display: flex;
-    justify-content: space-around;
+.value {
+  display: list-item;
+  list-style-type: disc;
+  list-style-position: inside;
+  text-transform: uppercase;
+  font-weight: 600;
 }
 
-.newsletter {
-    display: flex;
-    background-color: #087dc0;
-    position: absolute;
-    width: 1440px;
-    height: 168px;
-    left: 0px;
-    top: 1392px;
-
+@media screen and (max-width: 767px) {
+  main {
+    padding: 3rem 2rem;
+  }
 }
-
-.logo span {
-    color:"#087dc0"
-}*/
