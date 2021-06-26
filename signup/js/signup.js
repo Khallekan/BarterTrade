@@ -79,12 +79,11 @@ const handleFormSubmit = async (e) => {
   try {
     const createUserResp = await fetch(url, options);
     const createUserRespData = await createUserResp.json();
-    // console.log(createRespData);
     const { email, id, name } = await createUserRespData;
 
     // const jwtData = {
-    //   email,
-    //   password,
+    //   email: `${email}`,
+    //   password: `${data.re_password}`,
     // };
     // const jwtOptions = {
     //   method: 'POST',
@@ -100,23 +99,24 @@ const handleFormSubmit = async (e) => {
     // const createJwtResp = await createJwt.json();
 
     // console.log(createJwtResp);
-    // const respDataObj = {
-    //   uid: id,
-    //   token: email,
-    // };
-    // const activationUrl =
-    //   'https://bartertradeapi.herokuapp.com/api/auth/users/activation/';
-    // const activationOption = {
-    //   method: 'POST',
-    //   headers: {
-    //     'Content-type': 'application/json',
-    //   },
-    //   body: JSON.stringify(respDataObj),
-    // };
-    // const activateResp = await fetch(activationUrl, activationOption);
-    // console.log(activateResp);
-    // const activateData = await activateResp.json();
-    // console.log(activateData);
+
+    const respDataObj = {
+      uid: id,
+      token: email,
+    };
+    const activationUrl =
+      'https://bartertradeapi.herokuapp.com/api/auth/users/activation/';
+    const activationOption = {
+      method: 'POST',
+      headers: {
+        'Content-type': 'application/json',
+      },
+      body: JSON.stringify(respDataObj),
+    };
+    const activateResp = await fetch(activationUrl, activationOption);
+    console.log(await activateResp);
+    const activateData = await activateResp.json();
+    console.log(await activateData);
   } catch (error) {
     console.log(error);
     throw new Error(error);
