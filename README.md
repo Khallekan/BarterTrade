@@ -1,6 +1,6 @@
 # BarterTrade-FE-PJT-23 - BarterTrade
 
-![Design preview for the BarterTrade landing page](../landing-page/landing-page.png)
+![Design preview for the BarterTrade landing page](./landing-page/landing-page.png)
 
 ## Welcome! 👋
 
@@ -20,11 +20,11 @@ Ready to assist to create a pool of opportunity. The organized system of barter 
 
 Adherence to our moral and ethical principles; to be whole and undivided.
 
-- IMPARTIALITY:
+- Impartiality:
 
 To be able to be neutral without taking a side.
 
-- LOYALTY:
+- Loyalty:
 
 We show firm and constant support or allegiance to each individual.
 
