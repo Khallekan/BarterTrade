@@ -30,8 +30,24 @@
           <input
             type="password"
             class="togglePassword"
-            id="pass"
             name="password"
+            id="pass"
+            minlength="8"
+            placeholder="Enter password"
+            required
+          />
+          <i
+            class="far fa-eye-slash"
+            style="margin-left: -30px; cursor: pointer"
+          ></i>
+        </div>
+        <div class="password-box info-box">
+          <label for="retype-pass">Retype password</label>
+          <input
+            type="password"
+            class="togglePassword"
+            name="retype-password"
+            id="retype-pass"
             minlength="8"
             placeholder="Enter password"
             required
