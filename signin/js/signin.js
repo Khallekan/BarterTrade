@@ -5,26 +5,42 @@ const password = document.querySelector('#pass');
 const terms = document.querySelector('#terms');
 
 const togglePassword = document.querySelector('.togglePassword');
+const showPass = document.querySelector('.fa-eye-slash');
 
-const showPass = document.querySelector('.fa-eye-slash')
-signInForm.addEventListener('input', (e) =>{
-    e.preventDefault();
-    if(email.value.length > 0 &&
-      password.value.length >= 8) {
-          signInBtn.removeAttribute('disabled');
-          signInBtn.style.opacity = 1;
-      } else {
-          signInBtn.setAttribute('disabled', 'disabled');
-      }
-})
+const validateEmail = (email) => {
+  const re =
+    /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+  return re.test(email);
+};
 
-togglePassword.addEventListener('click', function (e) {
-    showPass.style.display = 'block'
-    // toggle the type attribute
- });
+const handleFormValidation = (e) => {
+  e.preventDefault();
+  if (validateEmail(email.value) > 0 && password.value.length >= 8) {
+    signInBtn.removeAttribute('disabled');
+    signInBtn.style.opacity = 1;
+  } else {
+    signInBtn.style.opacity = 0.5;
+    signInBtn.setAttribute('disabled', 'disabled');
+  }
+};
 
- showPass.addEventListener('click', function (e) {
-    // toggle the type attribute
-    const type = password.getAttribute('type') === 'password' ? 'text' : 'password';
-    password.setAttribute('type', type);
- });
+signInForm.addEventListener('input', handleFormValidation);
+
+const handleTogglePass = (e) => {
+  if (togglePassword.value.length > 0) {
+    showPass.style.display = 'block';
+    return;
+  }
+  showPass.style.display = 'none';
+  return;
+};
+
+togglePassword.addEventListener('keyup', handleTogglePass);
+
+const handleShowPass = () => {
+  const type =
+    password.getAttribute('type') === 'password' ? 'text' : 'password';
+  password.setAttribute('type', type);
+};
+
+showPass.addEventListener('click', handleShowPass);

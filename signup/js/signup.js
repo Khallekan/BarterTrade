@@ -27,7 +27,7 @@ const checkInputValidity = () => {
   return false;
 };
 
-signUpForm.addEventListener('input', (e) => {
+const handleFormValidation = (e) => {
   e.preventDefault();
   if (checkInputValidity()) {
     signUpBtn.removeAttribute('disabled');
@@ -36,7 +36,9 @@ signUpForm.addEventListener('input', (e) => {
     signUpBtn.setAttribute('disabled', 'disabled');
     signUpBtn.style.opacity = 0.5;
   }
-});
+};
+
+signUpForm.addEventListener('input', handleFormValidation);
 
 password.forEach((item, index) => {
   item.addEventListener('keyup', () => {
