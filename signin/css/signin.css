@@ -59,10 +59,10 @@ h2 {
 
 .fa-eye-slash {
   position: absolute;
+  display: none;
   top: 50%;
   right: 7%;
   transform: translateY(50%);
-  display: none;
 }
 
 .terms-box {
