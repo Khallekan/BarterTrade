@@ -2,6 +2,7 @@
 
 # dependencies
 /pages
+/test
 /.pnp
 .pnp.js
 

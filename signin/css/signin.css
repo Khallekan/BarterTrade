@@ -45,6 +45,19 @@ h2 {
   gap: 10px;
 }
 
+.info-box label {
+  display: flex;
+  justify-content: space-between;
+}
+.info-box label span {
+  margin-left: auto;
+  color: red;
+  display: none;
+}
+.info-box.error label span {
+  display: inline;
+}
+
 .info-box input {
   background: #f9f9f9;
   border: 1px solid #939393;
@@ -53,6 +66,14 @@ h2 {
   height: 56px;
   font-size: 1rem;
 }
+
+.info-box.error input {
+  border: 1px solid red;
+}
+.info-box.error input::placeholder {
+  color: red;
+}
+
 .password-box {
   position: relative;
 }

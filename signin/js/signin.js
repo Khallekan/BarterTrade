@@ -7,15 +7,35 @@ const terms = document.querySelector('#terms');
 const togglePassword = document.querySelector('.togglePassword');
 const showPass = document.querySelector('.fa-eye-slash');
 
-const validateEmail = (email) => {
-  const re =
-    /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-  return re.test(email);
-};
+const validateEmail = (input) => {
+    const re =
+      /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+
+    let inputParent = input.parentNode;
+    if (!re.test(input.value)) {
+      let inputError = input.parentNode.querySelector('span');
+      inputParent.classList.add('error');
+      inputError.innerHTML = `Enter a valid email address`;
+      return false;
+    }
+    inputParent.classList.remove('error');
+    return true;
+  },
+  handlePassword = (input) => {
+    let inputParent = input.parentNode;
+    if (input.value.length < 8) {
+      inputError = inputParent.querySelector('span');
+      inputParent.classList.add('error');
+      inputError.innerHTML = `must be 8 or more characters long`;
+      return false;
+    }
+    inputParent.classList.remove('error');
+    return true;
+  };
 
 const handleFormValidation = (e) => {
   e.preventDefault();
-  if (validateEmail(email.value) > 0 && password.value.length >= 8) {
+  if (validateEmail(email) > 0 && handlePassword(password)) {
     signInBtn.removeAttribute('disabled');
     signInBtn.style.opacity = 1;
   } else {
