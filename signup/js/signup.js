@@ -8,18 +8,59 @@ const form = document.getElementById('form');
 const password = Array.from(document.getElementsByClassName('togglePassword'));
 const showPass = Array.from(document.getElementsByClassName('fa-eye-slash'));
 
-const validateEmail = (email) => {
-  const re =
-    /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-  return re.test(email);
-};
+const validateEmail = (input) => {
+    const re =
+      /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+
+    let inputParent = input.parentNode;
+    if (!re.test(input.value)) {
+      let inputError = input.parentNode.querySelector('span');
+      inputParent.classList.add('error');
+      inputError.innerHTML = `Enter a valid email address`;
+      return false;
+    }
+    inputParent.classList.remove('error');
+    return true;
+  },
+  checkUserNameError = (input) => {
+    let inputParent = input.parentNode;
+    if (input.value.length === 0) {
+      let inputError = inputParent.querySelector('span');
+      inputError.innerHTML = `Enter a username`;
+      inputParent.classList.add('error');
+      return false;
+    }
+    inputParent.classList.remove('error');
+    return true;
+  },
+  checkUserPasswordError = (input1, input2) => {
+    let input1Parent = input1.parentNode,
+      input2Parent = input2.parentNode,
+      input1Error = input1Parent.querySelector('span'),
+      input2Error = input2Parent.querySelector('span');
+
+    if (input1.value.length < 8) {
+      input1Parent.classList.add('error');
+      input1Error.innerHTML = `must be 8 or more characters long`;
+    } else {
+      input1Parent.classList.remove('error');
+    }
+    if (input2.value !== input1.value || input2.value.length < 8) {
+      input2Parent.classList.add('error');
+      input2Error.innerHTML = `Not the same as password`;
+      return false;
+    }
+    if (input2.value === input1.value && input2.value.length > 8) {
+      input2Parent.classList.remove('error');
+    }
+    return true;
+  };
 
 const checkInputValidity = () => {
   if (
-    userName.value.length > 0 &&
-    validateEmail(email.value) > 0 &&
-    password[0].value.length >= 8 &&
-    password[1].value.length >= 8 &&
+    checkUserNameError(userName) &&
+    checkUserPasswordError(password[0], password[1]) &&
+    validateEmail(email) &&
     terms.checked
   ) {
     return true;

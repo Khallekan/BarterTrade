@@ -45,6 +45,16 @@ h2 {
 
 .info-box label {
   padding-bottom: 8px;
+  display: flex;
+  justify-content: space-between;
+}
+.info-box label span {
+  margin-left: auto;
+  color: red;
+  display: none;
+}
+.info-box.error label span {
+  display: inline;
 }
 
 .info-box input {
@@ -55,6 +65,12 @@ h2 {
   padding-left: 8px;
   height: 56px;
   font-size: 1rem;
+}
+.info-box.error input {
+  border: 1px solid red;
+}
+.info-box.error input::placeholder {
+  color: red;
 }
 
 .password-box {
@@ -72,6 +88,10 @@ h2 {
 .terms-box {
   flex-direction: row;
   align-items: center;
+}
+
+.info-box.terms-box label {
+  display: block;
 }
 
 /* .terms-box input {

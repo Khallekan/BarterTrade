@@ -15,7 +15,7 @@
       <h2>Create an Account</h2>
       <form id="form" class="sign-up-form">
         <div class="name-box info-box">
-          <label for="name">Name</label>
+          <label for="name">Name <span className="error-text"></span></label>
           <input
             type="text"
             id="name"
@@ -26,7 +26,9 @@
           />
         </div>
         <div class="password-box info-box">
-          <label for="pass">Password</label>
+          <label for="pass"
+            >Password <span className="error-text"></span
+          ></label>
           <input
             type="password"
             class="togglePassword"
@@ -42,7 +44,9 @@
           ></i>
         </div>
         <div class="password-box info-box">
-          <label for="retype-pass">Retype password</label>
+          <label for="retype-pass"
+            >Retype password <span className="error-text"></span
+          ></label>
           <input
             type="password"
             class="togglePassword"
@@ -58,7 +62,7 @@
           ></i>
         </div>
         <div class="email-box info-box">
-          <label for="email">Email</label>
+          <label for="email">Email <span className="error-text"></span></label>
           <input
             type="email"
             id="email"
