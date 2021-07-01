@@ -94,4 +94,10 @@ hr {
   .wrapper {
     border: none;
   }
-} ;
+}
+
+@media screen and (max-width: 600px) {
+  .wrapper {
+    margin-top: 0;
+  }
+}
