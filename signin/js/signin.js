@@ -85,8 +85,6 @@ const handleFormSubmit = async (e) => {
   try {
     const createJwtResp = await fetch(createJwtUrl, createJwtOptions);
     const createJwtData = await createJwtResp.json();
-
-    console.log(createJwtData);
   } catch (error) {
     throw new Error(error);
   }
