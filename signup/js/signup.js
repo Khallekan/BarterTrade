@@ -103,67 +103,51 @@ showPass.forEach((item, index) => {
   });
 });
 
+const setErrorText = (input, errorText) => {
+  let inputParent = input.parentNode;
+  let inputError = inputParent.querySelector('span');
+  inputError.innerHTML = `${errorText}`;
+  inputParent.classList.add('error');
+  return;
+};
+
 const handleFormSubmit = async (e) => {
   e.preventDefault();
-  const data = {
-    name: userName.value,
-    email: email.value,
-    password: password[0].value,
-    re_password: password[1].value,
+  const userNameValue = userName.value,
+    emailValue = email.value,
+    passwordValue = password[1].value,
+    url = `https://bartertradeapi.herokuapp.com/auth/users/`;
+  const paramData = {
+    username: userNameValue,
+    email: emailValue,
+    password: passwordValue,
   };
-  const url = 'https://bartertradeapi.herokuapp.com/api/auth/users/';
   const options = {
     method: 'POST',
     headers: {
-      'Content-type': 'application/json',
+      'Content-Type': 'application/json',
     },
-    body: JSON.stringify(data),
+    body: JSON.stringify(paramData),
   };
   try {
-    const createUserResp = await fetch(url, options);
-    const createUserRespData = await createUserResp.json();
-    const { email, id, name } = await createUserRespData;
-
-    // const jwtData = {
-    //   email: `${email}`,
-    //   password: `${data.re_password}`,
-    // };
-    // const jwtOptions = {
-    //   method: 'POST',
-    //   header: {
-    //     'Content-type': 'application/json',
-    //   },
-    //   body: JSON.stringify(jwtData),
-    // };
-    // const createJwt = await fetch(
-    //   `https://bartertradeapi.herokuapp.com/api/auth/jwt/create`,
-    //   jwtOptions
-    // );
-    // const createJwtResp = await createJwt.json();
-
-    // console.log(createJwtResp);
-
-    const respDataObj = {
-      uid: id,
-      token: email,
-    };
-    const activationUrl =
-      'https://bartertradeapi.herokuapp.com/api/auth/users/activation/';
-    const activationOption = {
-      method: 'POST',
-      headers: {
-        'Content-type': 'application/json',
-      },
-      body: JSON.stringify(respDataObj),
-    };
-    const activateResp = await fetch(activationUrl, activationOption);
-    console.log(await activateResp);
-    const activateData = await activateResp.json();
-    console.log(await activateData);
+    const resp = await fetch(url, options);
+    const data = await resp.json();
+    console.log(resp);
+    console.log(data);
+    if (Array.isArray(data.email)) {
+      setErrorText(email, data.email[0]);
+    }
+    if (Array.isArray(data.password)) {
+      setErrorText(password[0], data.password[0]);
+    }
+    if (Array.isArray(data.username)) {
+      setErrorText(userName, data.username[0]);
+    }
+    if (resp.status < 299) {
+      window.location.replace('../signin/signin.html');
+    }
   } catch (error) {
-    console.log(error);
     throw new Error(error);
   }
 };
-
 const formEventListener = form.addEventListener('submit', handleFormSubmit);

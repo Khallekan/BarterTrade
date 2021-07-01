@@ -64,3 +64,35 @@ const handleShowPass = () => {
 };
 
 showPass.addEventListener('click', handleShowPass);
+
+const handleFormSubmit = async (e) => {
+  e.preventDefault();
+  const emailValue = email.value,
+    passwordValue = password.value;
+
+  const createJwtParamData = {
+      email: emailValue,
+      password: passwordValue,
+    },
+    createJwtOptions = {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(createJwtParamData),
+    },
+    createJwtUrl = `https://bartertradeapi.herokuapp.com/auth/jwt/create/`;
+  try {
+    const createJwtResp = await fetch(createJwtUrl, createJwtOptions);
+    const createJwtData = await createJwtResp.json();
+
+    console.log(createJwtData);
+  } catch (error) {
+    throw new Error(error);
+  }
+};
+
+const formSubmitEventListener = signInForm.addEventListener(
+  'submit',
+  handleFormSubmit
+);
