@@ -13,9 +13,9 @@
   <body>
     <div class="wrapper">
       <h2>Create an Account</h2>
-      <form class="sign-up-form">
+      <form id="form" class="sign-up-form">
         <div class="name-box info-box">
-          <label for="name">Name</label>
+          <label for="name">Name <span className="error-text"></span></label>
           <input
             type="text"
             id="name"
@@ -26,12 +26,32 @@
           />
         </div>
         <div class="password-box info-box">
-          <label for="pass">Password</label>
+          <label for="pass"
+            >Password <span className="error-text"></span
+          ></label>
           <input
             type="password"
             class="togglePassword"
-            id="pass"
             name="password"
+            id="pass"
+            minlength="8"
+            placeholder="Enter password"
+            required
+          />
+          <i
+            class="far fa-eye-slash"
+            style="margin-left: -30px; cursor: pointer"
+          ></i>
+        </div>
+        <div class="password-box info-box">
+          <label for="retype-pass"
+            >Retype password <span className="error-text"></span
+          ></label>
+          <input
+            type="password"
+            class="togglePassword"
+            name="retype-password"
+            id="retype-pass"
             minlength="8"
             placeholder="Enter password"
             required
@@ -42,17 +62,24 @@
           ></i>
         </div>
         <div class="email-box info-box">
-          <label for="email">Email</label>
+          <label for="email">Email <span className="error-text"></span></label>
           <input
             type="email"
             id="email"
+            name="email"
             placeholder="Enter email address"
             required
           />
           <p>We’ll never share your email with anyone else</p>
         </div>
         <div class="terms-box info-box">
-          <input type="checkbox" value="terms" id="terms" />
+          <input
+            type="checkbox"
+            name="checkbox"
+            value="terms"
+            id="terms"
+            required
+          />
           <label for="terms" class="checkbox"></label>
           <label for="terms">
             I agree to the <a href="#">Terms</a> and
