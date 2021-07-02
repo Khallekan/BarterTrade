@@ -132,8 +132,6 @@ const handleFormSubmit = async (e) => {
   try {
     const resp = await fetch(url, options);
     const data = await resp.json();
-    console.log(resp);
-    console.log(data);
     if (Array.isArray(data.email)) {
       setErrorText(email, data.email[0]);
     }
