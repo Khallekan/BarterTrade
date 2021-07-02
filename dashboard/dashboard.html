@@ -4,9 +4,158 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./dashboard.css">
+    <link href='https://fonts.googleapis.com/css?family=Inter' rel='stylesheet'>
     <title>Dashboard</title>
   </head>
   <body>
-    <h1>THIS IS THE DASHBOARD</h1>
+    <header>
+      <img src="./assets/BarterTrade.svg" alt="BarterTrade" class="logo">
+      <div class="search-field-background">
+        <div class="search-field">
+          <input autofocus type="text" placeholder="Find items here">
+          <button type="submit"><ion-icon name="search"></ion-icon></button>  
+        </div>
+        <div class="icons">
+          <button type="submit" id="mail">
+            <ion-icon name="mail"></ion-icon>
+          </button>
+          <button type="submit" id="notifications">
+            <ion-icon name="notifications"></ion-icon>
+          </button>
+          <img src="./assets/profile.svg" alt="">
+          <button id="drop-down">
+            <ion-icon name="chevron-down"></ion-icon>
+          </button>
+          
+        </div>
+        
+        
+      </div>
+      
+      
+    </header>
+
+   
+    
+    <main>
+
+      <aside>
+        <nav>
+          <ul class="nav-list">
+            <li><a href="dashboard.html">
+                <ion-icon name="cube-sharp"></ion-icon>Dashboard
+              </a></li>
+            <li><a href="#">
+                <ion-icon name="analytics-sharp"></ion-icon>Trade
+              </a></li>
+            <li><a href="#">
+                <ion-icon name="heart-sharp"></ion-icon>Wishlist
+              </a></li>
+            <li><a href="#">
+                <ion-icon name="time-sharp"></ion-icon>History
+              </a></li>
+            <li><a href="#">
+                <ion-icon name="settings-sharp"></ion-icon>Settings
+              </a></li>
+          </ul>
+        </nav>
+
+        <ul class="logout">
+          <li><a href="onboarding.html"><ion-icon name="log-out"></ion-icon>Logout</a></li>
+        </ul>
+      
+      </aside>
+      <div class="dashboard">
+        <h4>Popular categories</h4>
+        <div class="categories">
+          <div class="category">
+            <a href="#"><img src="./assets/iphone11.svg" alt="Electronics">
+            <p class="caption">Electronics</p>
+            </a>
+            
+          </div>
+          <div class="category">
+            <a href="#"><img src="./assets/iphone11.svg" alt="Phones">
+            <p class="caption">Phones</p>
+            </a>
+            
+          </div>
+          <div class="category">
+            <a href="#"><img src="./assets/iphone11.svg" alt="Computers">
+            <p class="caption">Computers</p>
+            </a>
+            
+          </div>
+          <div class="category">
+            <a href="#"><img src="./assets/washingmachine.svg" alt="Sneakers">
+            <p class="caption">Sneakers</p>
+            </a>
+            
+          </div>
+          <div class="category">
+            <a href="#"><img src="./assets/iphone11.svg" alt="Clothes">
+            <p class="caption">Clothes</p>
+            </a>
+            
+          </div>
+          <div class="category">
+            <a href="#"><img src="./assets/washingmachine.svg" alt="Furniture">
+            <p class="caption">Furniture</p>
+            </a>
+            
+          </div>
+          <div class="category">
+            <a href="#"><img src="./assets/washingmachine.svg" alt="Health">
+            <p class="caption">Health</p>
+            </a>
+            
+          </div>
+          <div class="category">
+            <a href="#"><img src="./assets/washingmachine.svg" alt="Gadgets">
+            <p class="caption">Gadgets</p>
+            </a>
+            
+          </div>
+          <div class="category btn">
+            <button><a href="#"><ion-icon name="chevron-forward" id="other"></ion-icon></a></button>
+            <p class="caption">Other</p>
+          </div>
+          
+        </div>
+
+        <div class="latest-barter">
+          <h4>Latest Barter</h4>
+          <a href="#" class="see-all">See all<ion-icon name="chevron-forward" id="see-all"></ion-icon></a>
+          <div class="barters">
+            <div class="barter">
+              <a href="#"><img src="./assets/iphone11.svg" alt="iPhone11"></a>
+              <p>Iphone 11 pro
+                worth:N500,000
+                Exchanging With: Samsung S21
+              </p>
+            </div>
+            <div class="barter">
+              <a href="#"><img src="./assets/washingmachine.svg" alt="washingmachine"></a>
+              <p>Washing machine
+                worth:N58,000
+                Exchanging with: Plasma TV</p>
+            </div>
+            <div class="barter">
+              <a href="#"><img src="./assets/washingmachine.svg" alt="washingmachine"></a>
+              <p>Washing machine
+                worth:N58,000
+                Exchanging with: Plasma TV</p>
+            </div>
+          </div>
+
+          
+        </div>
+      </div>
+
+    </main>
+
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
   </body>
 </html>
