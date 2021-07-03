@@ -180,3 +180,17 @@ input[type='submit'] {
   display: flex;
   align-items: center;
 }
+
+.document_error {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #087dc0;
+  color: #f9f9f9;
+  padding: 0.5rem 0;
+  display: none;
+}

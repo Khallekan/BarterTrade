@@ -3,6 +3,7 @@ const signInForm = document.querySelector('.sign-in-form');
 const email = document.querySelector('#email');
 const password = document.querySelector('#pass');
 const terms = document.querySelector('#terms');
+const documentError = document.getElementById('document_error');
 
 const togglePassword = document.querySelector('.togglePassword');
 const showPass = document.querySelector('.fa-eye-slash');
@@ -68,7 +69,8 @@ showPass.addEventListener('click', handleShowPass);
 const handleFormSubmit = async (e) => {
   e.preventDefault();
   const emailValue = email.value,
-    passwordValue = password.value;
+    passwordValue = password.value,
+    isRememberMeChecked = terms.checked;
 
   const createJwtParamData = {
       email: emailValue,
@@ -84,7 +86,20 @@ const handleFormSubmit = async (e) => {
     createJwtUrl = `https://bartertradeapi.herokuapp.com/auth/jwt/create/`;
   try {
     const createJwtResp = await fetch(createJwtUrl, createJwtOptions);
-    const createJwtData = await createJwtResp.json();
+    const data = await createJwtResp.json();
+    if (isRememberMeChecked) {
+      localStorage.setItem('zuribartertrade', JSON.stringify(data.refresh));
+    }
+    if (createJwtResp.status >= 300) {
+      console.log(documentError);
+      documentError.innerHTML = `Please sign up or click the link in the email sent to you`;
+      documentError.style.display = 'flex';
+    }
+    if (createJwtResp.status < 299) {
+      window.location.replace('../dashboard/dashboard.html');
+    }
+
+    console.log(data);
   } catch (error) {
     throw new Error(error);
   }
