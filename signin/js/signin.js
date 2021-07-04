@@ -96,7 +96,25 @@ const handleFormSubmit = async (e) => {
       documentError.style.display = 'flex';
     }
     if (createJwtResp.status < 299) {
-      window.location.replace('../dashboard/dashboard.html');
+      const authBearerTokenParams = {
+        token: data.access,
+      };
+      const authBearerTokenOptions = {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(authBearerTokenParams),
+      };
+      const authBearerTokenUrl = `https://bartertradeapi.herokuapp.com/auth/jwt/verify/`;
+      const authBearerTokenResp = await fetch(
+        authBearerTokenUrl,
+        authBearerTokenOptions
+      );
+      const authBearerTokenData = await authBearerTokenResp.json();
+      if (authBearerTokenResp.status === 200) {
+        window.location.replace('../dashboard/dashboard.html');
+      }
     }
 
     // console.log(data);
