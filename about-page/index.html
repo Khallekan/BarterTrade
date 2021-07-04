@@ -9,18 +9,19 @@
       defer
       crossorigin="anonymous"
     ></script>
+    <link rel="stylesheet" href="../general/tailwind.css" />
     <link rel="stylesheet" href="../general/index.css" />
     <link rel="stylesheet" href="./style.css" type="text/css" />
     <title>About Page</title>
   </head>
   <body>
     <header class="nav-container" id="top">
-      <h1 class="nav-logo">
+      <h1 class="nav-logo font-extrabold">
         <a href="./index.html"><span>b</span>artertrade</a>
       </h1>
       <div class="nav-wrapper" id="nav">
         <nav class="nav-links">
-          <ul>
+          <ul class="font-normal">
             <li class="nav-links__link"><a href="../index.html">home</a></li>
             <li class="nav-links__link">
               <a href="../about page/index.html">about</a>
@@ -90,55 +91,210 @@
         </svg>
       </button>
     </header>
-    <main>
-      <h2 class="main-head">Get to know Us</h2>
-      <div class="txt-bx">
-        <p>
-          At Barter Trade, our <span class="bold">plan </span>is to make life
-          simpler and easier while bartering with an improvement of modern
-          technology.To make comfortable space for individuals to barter goods
-          with any other individual with or without the use of money.
-        </p>
-        <p>
-          We make trading items simple with easy to understand steps, cutting
-          out all complexity.
-        </p>
-      </div>
-      <div class="txt-bx">
-        <p>
-          our <span class="bold">mission</span> is to make barter easier, faster
-          and effective as we help to create a pool of parties willing to barter
-          goods and services between each other, this pool creates many
-          available options for what you want to barter with and the barter
-          available at every point in time
-        </p>
-      </div>
-      <div class="our-values">
-        <h3 class="values-head">
-          Our <span class="bold">values</span> are as follows
-        </h3>
-        <div class="value-txt">
-          <span class="value">service:</span>
-          Ready to assist to create a pool of opportunities. The organized
-          system of barter parties required by the public.
-        </div>
-        <div class="value-txt">
-          <span class="value">integrity:</span>
-          Adherence to our moral and ethical principles; to be whole and
-          undivided.
-        </div>
-        <div class="value-txt">
-          <span class="value">impartiality: </span>
-          To be able to be neutral without taking a side.
-        </div>
-        <div class="value-txt">
-          <span class="value">duty: </span>
-          We are always fulfilling your obligations.
-        </div>
-        <div class="value-txt">
-          <span class="value">loyalty:</span>
-          We show firm and constant support or allegiance to each individual.
-        </div>
+    <main
+      class="
+        md:px-9
+        px-5
+        lg:px-20
+        md:pb-8
+        p-5
+        lg:pb-20
+        flex flex-col
+        lg:gap-24
+        gap-4
+        md:gap-6
+      "
+    >
+      <h2
+        class="
+          lg:text-4xl
+          text-2xl
+          md:text-5xl
+          text-black
+          font-medium
+          text-center
+        "
+      >
+        Get to know Us
+      </h2>
+      <div class="flex flex-col lg:gap-28 gap-4 md:gap-12">
+        <section class="flex flex-col lg:gap-12 gap-2 md:gap-4 w-full">
+          <h3
+            class="
+              zuri-h3
+              font-medium
+              w-max
+              lg:text-4xl
+              text-2xl
+              md:text-5xl
+              mx-auto
+              border-b-8
+            "
+          >
+            Our <span class="font-bold">Plan</span>
+          </h3>
+          <div class="flex lg:flex-row flex-col lg:flex-wrap gap-4">
+            <div
+              class="
+                flex-1
+                lg:w-3/6
+                w-full
+                bg-white
+                lg:text-xl
+                text-sm
+                md:text-3xl
+                align-middle
+                p-6
+                rounded
+              "
+            >
+              <p class="">
+                At Barter Trade, our
+                <span class="font-bold uppercase">plan </span>is to make life
+                simpler and easier while bartering with an improvement of modern
+                technology.To make comfortable space for individuals to barter
+                goods with any other individual with or without the use of
+                money.
+                <br />
+                We make trading simple with easy to understand steps, cutting
+                out all complexity
+              </p>
+            </div>
+            <div class="flex-1 w-full lg:w-3/6 overflow-hidden rounded">
+              <img
+                class="w-full h-full max-h-full lg:max-h-80 object-cover"
+                src="https://images.unsplash.com/photo-1619759247142-b457e9e6b634?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjN8fHBsYW58ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=60"
+                alt="plan-1"
+              />
+            </div>
+            <div class="flex-auto w-full overflow-hidden rounded">
+              <img
+                class="w-full max-h-full lg:max-h-96 object-cover"
+                src="https://images.unsplash.com/photo-1504579687459-79570b1d60f3?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MzR8fHZhbHVlc3xlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=60"
+                alt="plan-2"
+              />
+            </div>
+          </div>
+        </section>
+        <section class="flex flex-col lg:gap-12 gap-2 md:gap-4 w-full">
+          <h3
+            class="
+              zuri-h3
+              font-medium
+              w-max
+              lg:text-4xl
+              text-2xl
+              md:text-5xl
+              mx-auto
+              border-b-8
+            "
+          >
+            Our <span class="font-bold">Mission</span>
+          </h3>
+          <div class="flex lg:flex-row flex-col lg:flex-wrap gap-4">
+            <div
+              class="
+                flex-1
+                lg:w-3/6
+                w-full
+                bg-white
+                lg:text-xl
+                text-sm
+                md:text-3xl
+                align-middle
+                p-6
+                rounded
+              "
+            >
+              <p class="text-center">
+                Our <span class="font-bold uppercase">Mission</span> is to make
+                barter easier, faster and effective as we help to create a pool
+                of parties willing to barter good and services between each
+                other, this pool creates many available options for what you
+                want to barter with and barter for available at every point in
+                time.
+              </p>
+            </div>
+            <div
+              class="flex-1 w-full lg:w-3/6 overflow-hidden rounded order-first"
+            >
+              <img
+                class="w-full h-full max-h-full lg:max-h-80 object-cover"
+                src="https://images.unsplash.com/photo-1476480862126-209bfaa8edc8?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjZ8fGElMjBzdGFpciUyMHdpdGglMjBzbmVha2Vyc3xlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=60"
+                alt="plan-1"
+              />
+            </div>
+            <div class="flex-auto w-full overflow-hidden rounded">
+              <img
+                class="w-full max-h-full lg:max-h-96 object-cover"
+                src="https://images.unsplash.com/photo-1482062364825-616fd23b8fc1?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjcwfHxtYWNiaW9vayUyMHdpdGglMjBjb2RpbmclMjBzY3JlZW58ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=60"
+                alt="plan-2"
+              />
+            </div>
+          </div>
+        </section>
+        <section class="flex flex-col lg:gap-12 gap-2 md:gap-4 w-full">
+          <h3
+            class="
+              zuri-h3
+              font-medium
+              w-max
+              lg:text-4xl
+              text-2xl
+              md:text-5xl
+              mx-auto
+              border-b-8
+            "
+          >
+            Our <span class="font-bold">Values</span>
+          </h3>
+          <div class="flex lg:flex-row flex-col lg:gap-4 gap-2">
+            <div
+              class="bg-white lg:text-xl md:text-3xl lg:w-3/6 w-full rounded"
+            >
+              <ul
+                class="
+                  text-center
+                  flex flex-col
+                  gap-2
+                  p-2
+                  py-4
+                  lg:text-xl
+                  text-sm
+                  md:text-3xl md:gap-4 md:p-4 md:py-8
+                  lg:gap-6 lg:p-4 lg:py-12
+                "
+              >
+                <li class="lg:flex flex-col">
+                  <span class="font-bold">SERVICE:</span> <br />
+                  Ready to assist to create a pool of opportunity. The organized
+                  system of barter parties required by the public.
+                </li>
+                <li class="lg:flex flex-col">
+                  <span class="font-bold"> INTEGRITY:</span> <br />
+                  Adherence to our moral and ethical principles; to be whole and
+                  undivided.
+                </li>
+                <li class="lg:flex flex-col">
+                  <span class="font-bold"> IMPARTIALITY:</span> <br />
+                  To be able to be neutral without taking a side.
+                </li>
+                <li class="lg:flex flex-col">
+                  <span class="font-bold"> LOYALTY:</span> <br />
+                  We show firm and constant support or allegiance to each
+                  individual.
+                </li>
+              </ul>
+            </div>
+            <div class="flex-1 lg:w-3/6 w-full overflow-hidden rounded">
+              <img
+                class="h-full w-full object-cover"
+                src="https://images.unsplash.com/photo-1556740738-b6a63e27c4df?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTB8fHBheW1lbnR8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=60"
+                alt="plan-1"
+              />
+            </div>
+          </div>
+        </section>
       </div>
     </main>
     <footer>
