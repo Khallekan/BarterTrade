@@ -403,7 +403,7 @@ footer {
   -webkit-box-direction: normal;
   -ms-flex-flow: column nowrap;
   flex-flow: column nowrap;
-  text-align: left;
+  text-align: center;
   gap: 6vw;
 }
 
@@ -419,11 +419,11 @@ footer {
 }
 
 .ft-blk p {
-  font-size: 4.5vw;
+  font-size: 4vw;
 }
 
 .ft-blk .logo {
-  font-size: 7.5vw;
+  font-size: 5vw;
 }
 
 .ft-blk .logo span {
@@ -432,7 +432,7 @@ footer {
 
 .ft-blk h2,
 .ft-blk h3 {
-  font-size: 5.5vw;
+  font-size: 4vw;
   font-weight: 500;
 }
 
@@ -448,7 +448,7 @@ footer {
 }
 
 .quick-lk li {
-  font-size: 4.5vw;
+  font-size: 4vw;
 }
 
 .contact-mail,
@@ -457,7 +457,7 @@ footer {
   width: 100%;
   margin: 0 auto;
   text-align: left;
-  font-size: 4vw;
+  font-size: 3vw;
 }
 
 .contact-mail::before,
@@ -525,8 +525,8 @@ footer {
 }
 
 .go-up {
-  width: 10vw;
-  height: 10vw;
+  width: 7vw;
+  height: 7vw;
   background: white;
   position: absolute;
   top: 0;
