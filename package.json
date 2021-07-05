@@ -1,0 +1,22 @@
+{
+  "name": "bartertrade-fe-pjt-23",
+  "version": "1.0.0",
+  "description": "Trade by barter app",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zuri-training/BarterTrade-FE-PJT-23"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/zuri-training/BarterTrade-FE-PJT-23/issues"
+  },
+  "homepage": "https://github.com/zuri-training/BarterTrade-FE-PJT-23#readme"
+}

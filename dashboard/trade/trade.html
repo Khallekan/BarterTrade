@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Barter Trade</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" type="text/css" media="screen" href="trade.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="nav">
+        <ul>
+          <li>
+            <a href="#">
+              <!-- <span class="icon"></span> -->
+              <span class="logo"><span>B</span>arterTrade</span>
+            </a>
+          </li>
+          <li>
+            <a href="../dashboard.html">
+              <span class="icon"><ion-icon name="cube-sharp"></ion-icon></span>
+              <span class="title">Dashbaoard</span>
+            </a>
+          </li>
+          <li class="selected">
+            <a href="#">
+              <span class="icon"
+                ><ion-icon name="analytics-sharp"></ion-icon
+              ></span>
+              <span class="title">Trade</span>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <span class="icon"><ion-icon name="heart-sharp"></ion-icon></span>
+              <span class="title">Wishlist</span>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <span class="icon"><ion-icon name="time-sharp"></ion-icon></span>
+              <span class="title">History</span>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <span class="icon"
+                ><ion-icon name="settings-sharp"></ion-icon
+              ></span>
+              <span class="title">Settings</span>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <span class="icon"><ion-icon name="log-out"></ion-icon></span>
+              <span class="title">Logout</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <main class="main">
+        <div class="topbar">
+          <div class="toggle" onclick="toggleMenu()">
+            <ion-icon name="menu-outline"></ion-icon>
+          </div>
+          <span class="greeting">Welcome Krish Roberto</span>
+          <div class="user">
+            <button type="submit" id="mail">
+              <ion-icon name="mail"></ion-icon>
+            </button>
+            <button type="submit" id="notifications">
+              <ion-icon name="notifications"></ion-icon>
+              <!-- <div class="red"></div> -->
+            </button>
+            <img src="profile.svg" alt="" />
+            <span class="username">Krish Roberto</span>
+            <button id="drop-down">
+              <ion-icon name="chevron-down"></ion-icon>
+            </button>
+            <time datetime="">10:30AM</time>
+          </div>
+        </div>
+        <div class="inventory">
+          <div class="stock">
+            <div class="stock-img">
+              <img src="stock1.svg" alt="" />
+            </div>
+            <div class="stock-info">
+              <span class="stock-name">Nike Air Sneakers</span>
+              <span class="stock-id">ID NO: #004</span>
+              <span class="stock-status">open</span>
+            </div>
+          </div>
+          <div class="stock">
+            <div class="stock-img">
+              <img src="stock2.svg" alt="" />
+            </div>
+            <div class="stock-info">
+              <span class="stock-name">Samsung S8</span>
+              <span class="stock-id">ID NO: #004</span>
+              <span class="stock-status">open</span>
+            </div>
+          </div>
+          <div class="stock">
+            <div class="stock-img">
+              <img src="stock3.svg" alt="" />
+            </div>
+            <div class="stock-info">
+              <span class="stock-name">Nike Air Sneakers</span>
+              <span class="stock-id">ID NO: #004</span>
+              <span class="stock-status">open</span>
+            </div>
+          </div>
+          <div class="stock">
+            <div class="stock-img">
+              <img src="stock4.svg" alt="" />
+            </div>
+            <div class="stock-info">
+              <span class="stock-name">Canon Camera</span>
+              <span class="stock-id">ID NO: #004</span>
+              <span class="stock-status">open</span>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
+    <script src="trade.js"></script>
+  </body>
+</html>

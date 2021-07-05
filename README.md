@@ -30,9 +30,10 @@ We show firm and constant support or allegiance to each individual.
 
 #### The Frontend team
 
-- Dada Olawunmi - [dread](https://github.com/dread557)
 - Oke Olalekan - [khallekan](https://github.com/khallekan)
+- Dada Olawunmi - [dread](https://github.com/dread557)
 - Martins Umekwe - [decypher](https://github.com/Decypher1)
+- Dolapo Agboola - [dvlapo](https://github.com/dvlapo)
 
 ## Contribution Guide
 

@@ -1,7 +1,7 @@
 main {
   display: flex;
   flex-direction: column;
-  padding: 3rem 5rem 3rem;
+  /* padding: 3rem 5rem 3rem; */
   color: #696969;
 }
 
@@ -10,6 +10,21 @@ main {
   margin: 24px 0;
   color: #000;
   font-weight: 500;
+}
+
+.zuri-h3 {
+  border-bottom-color: #087dc0;
+}
+
+.zuri-flex-row-wrap {
+  display: flex;
+  flex-flow: row wrap;
+}
+.flex-50 {
+  flex: 50%;
+}
+.flex-100 {
+  flex: 100%;
 }
 
 .txt-bx {
@@ -55,8 +70,8 @@ main {
   font-weight: 600;
 }
 
-@media screen and (max-width: 767px) {
+/* @media screen and (max-width: 767px) {
   main {
     padding: 3rem 2rem;
   }
-}
+} */
