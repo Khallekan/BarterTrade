@@ -56,7 +56,7 @@ if (
   // change to http://localhost:5500/dashboard/dashboard.html on your pc
   // and https://zuri-bartertrade.vercel.app/signin/signin.html before
   // pushing to github
-  document.referrer !== 'http://localhost:5500/signin/signin.html'
+  document.referrer !== 'https://zuri-bartertrade.vercel.app/signin/signin.html'
 ) {
   checkRefreshValidity();
 }
