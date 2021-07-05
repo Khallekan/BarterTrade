@@ -1,26 +1,28 @@
-// Error Token invalid for some reason
+const refreshToken = localStorage.getItem('zuribartertrade');
 
-// const refreshToken = localStorage.getItem('zuribartertrade');
+const fetchAndRedirect = async () => {
+  const validUrl = 'https://bartertradeapi.herokuapp.com/auth/jwt/verify/',
+    refreshUrl = 'https://bartertradeapi.herokuapp.com/auth/jwt/refresh/';
+  const validParams = {
+      token: refreshToken,
+    },
+    validOptions = {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(validParams),
+    };
 
-// const fetchAndRedirect = async () => {
-//   const url = 'https://bartertradeapi.herokuapp.com/auth/jwt/refresh/';
-//   const params = {
-//     refresh: refreshToken,
-//   };
-//   const options = {
-//     method: 'POST',
-//     headers: {
-//       'Content-Type': 'application/json',
-//     },
-//     body: JSON.stringify(params),
-//   };
+  const validResp = await fetch(validUrl, validOptions);
+  if (validResp.status >= 300) {
+    return;
+  }
+  if (validResp.status < 300) {
+    window.location.replace('../dashboard/dashboard.html');
+  }
+};
 
-//   const resp = await fetch(url, options);
-//   const data = await resp.json();
-
-//   console.log(data);
-// };
-
-// if (refreshToken !== null) {
-//   fetchAndRedirect();
-// }
+if (refreshToken !== null) {
+  fetchAndRedirect();
+}
