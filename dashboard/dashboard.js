@@ -10,42 +10,55 @@ let settingsBtn = document.querySelector('#settings-btn');
 let settingsPage = document.querySelector('#settings');
 
 // show dashboard by default
-dashboardBtn.classList.add('add-border');
+dashboardBtn.classList.add('active');
 tradePage.classList.add('remove');
 wishlistPage.classList.add('remove');
 historyPage.classList.add('remove');
 settingsPage.classList.add('remove');
 
 dashboardBtn.addEventListener('click', () => {
-    dashboardPage.classList.remove('remove');
-    dashboardBtn.classList.add('add-border');
-    // remove ather pages
-    tradePage.classList.add('remove');
-    wishlistPage.classList.add('remove');
-    historyPage.classList.add('remove');
-    settingsPage.classList.add('remove');
-    //remove border from other buttons
-    tradeBtn.classList.remove('add-border');
-    wishlistBtn.classList.remove('add-border');
-    historyBtn.classList.remove('add-border');
-    settingsBtn.classList.remove('add-border');
+  dashboardPage.classList.remove('remove');
+  dashboardBtn.classList.add('active');
+  // remove ather pages
+  tradePage.classList.add('remove');
+  wishlistPage.classList.add('remove');
+  historyPage.classList.add('remove');
+  settingsPage.classList.add('remove');
+  //remove border from other buttons
+  tradeBtn.classList.remove('active');
+  wishlistBtn.classList.remove('active');
+  historyBtn.classList.remove('active');
+  settingsBtn.classList.remove('active');
 });
-
 
 // show trade
-tradeBtn.addEventListener('click', () => {    
-    tradePage.classList.remove('remove');
-    tradeBtn.classList.add('add-border');
-    // remove ather pages
-    dashboardPage.classList.add('remove');
-    wishlistPage.classList.add('remove');
-    historyPage.classList.add('remove');
-    settingsPage.classList.add('remove');
-    //remove border from other buttons
-    dashboardBtn.classList.remove('add-border');
-    wishlistBtn.classList.remove('add-border');
-    historyBtn.classList.remove('add-border');
-    settingsBtn.classList.remove('add-border');
+tradeBtn.addEventListener('click', () => {
+  tradePage.classList.remove('remove');
+  tradeBtn.classList.add('active');
+  // remove ather pages
+  dashboardPage.classList.add('remove');
+  wishlistPage.classList.add('remove');
+  historyPage.classList.add('remove');
+  settingsPage.classList.add('remove');
+  //remove border from other buttons
+  dashboardBtn.classList.remove('active');
+  wishlistBtn.classList.remove('active');
+  historyBtn.classList.remove('active');
+  settingsBtn.classList.remove('active');
 });
 
-
+// show wishlist
+wishlistBtn.addEventListener('click', () => {
+  wishlistPage.classList.remove('remove');
+  wishlistBtn.classList.add('active');
+  // remove ather pages
+  dashboardPage.classList.add('remove');
+  tradePage.classList.add('remove');
+  historyPage.classList.add('remove');
+  settingsPage.classList.add('remove');
+  //remove border from other buttons
+  dashboardBtn.classList.remove('active');
+  tradeBtn.classList.remove('active');
+  historyBtn.classList.remove('active');
+  settingsBtn.classList.remove('active');
+});

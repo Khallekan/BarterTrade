@@ -15,7 +15,6 @@
   <body>
     <div class="aside">
       <img src="./assets/BarterTrade.svg" alt="BarterTrade" class="logo" />
-
       <aside>
         <nav>
           <ul class="nav-list">
@@ -164,7 +163,7 @@
     </main>
 
     <!-- Trade -->
-    <div class="trade" id="trade">
+    <div class="trade scroll" id="trade">
       <h1>INVENTORY</h1>
       <div class="trade-grid">
         <div class="trade-item item1">
@@ -207,15 +206,49 @@
 
     <!-- Wishlist -->
 
-    <div id="wishlist">WISHLIST</div>
+    <div class="wishlist scroll" id="wishlist">
+      <div class="wishlist-wrapper">
+        <div class="search-field-background">
+          <div class="search-field">
+            <input autofocus type="text" placeholder="Find items here" />
+            <button type="submit">
+              <ion-icon name="search"></ion-icon>
+            </button>
+          </div>
+          <div class="icons">
+            <button type="submit" id="mail">
+              <ion-icon name="mail"></ion-icon>
+            </button>
+            <button type="submit" id="notifications">
+              <ion-icon name="notifications"></ion-icon>
+            </button>
+            <img src="./assets/profile.svg" alt="" />
+            <button id="drop-down">
+              <ion-icon name="chevron-down"></ion-icon>
+            </button>
+          </div>
+        </div>
+
+        <div class="wishlist-container">
+          <div class="no-wishlist_img">
+            <img
+              src="./assets/undraw_Wishlist_re_m7tv 1.svg"
+              alt="no wishlist"
+            />
+          </div>
+          <p class="no-wishlist_text">No Wishlist Created Yet</p>
+          <button class="no-wishlist_btn">Add Wishlist &#xFF0B;</button>
+        </div>
+      </div>
+    </div>
 
     <!-- History -->
 
-    <div id="history">HISTORY</div>
+    <div class="history scroll" id="history">HISTORY</div>
 
     <!-- Settings -->
 
-    <div id="settings">SETTINGS</div>
+    <div class="settings scroll" id="settings">SETTINGS</div>
 
     <script src="./dashboard.js"></script>
     <script
