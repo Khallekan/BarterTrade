@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@500&display=swap');
+
+
+* {
+    padding: 0;
+    margin: 0;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    font-family: "Inter", sans-serif;
+    background-color: e5e5e5;
+  }
+  
+  .logo {
+    display: flex;
+    font-size: 24px;
+    align-self: center;
+    text-transform: uppercase;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    cursor: pointer;
+    margin: 26px 0;
+  }
+  
+  .logo {
+    text-decoration: none;
+    color: #16161d;
+  }
+  
+  .logo span {
+    color: #087cbf;
+  }
+  
+  .wrapper {
+    display: flex;
+    flex-direction: column;
+    max-width: 920px;
+    align-items: center;
+    background: #ffffff;
+    border: 1px solid #087dc0;
+    box-sizing: border-box;
+    border-radius: 4px;
+    margin: 60px auto;
+    padding: 30px;
+    padding-bottom: 180px;
+  }
+  
+  main {
+    display: flex;
+    flex-direction: column;
+    max-width: 438px;
+  }
+  
+  main h3 {
+    margin-bottom: 26px;
+    font-weight: 500;
+  }
+  
+  main p {
+    margin-bottom: 26px;
+  }
+  
+  form {
+    gap: 26px;
+  }
+  
+  #password {
+    background: #f9f9f9;
+    border: 1px solid #bfe8ff;
+    border-radius: 4px;
+    height: 51px;
+    padding-left: 8px;
+  }
+  
+
+  #password2 {
+      background: #f9f9f9;
+      border: 1px solid #bfe8ff;
+      border-radius: 4px;
+      height: 51px;
+      padding-left: 8px;
+  }
+  
+  button {
+    background: #087dc0;
+    border-radius: 4px;
+    color: #fff;
+    height: 60px;
+    border: 1px solid;
+  }
+  
+  hr {
+    margin-top: 26px;
+  }
+  
+  
+  
+  .foot-notes {
+    position: absolute;
+    left: calc(50% - 158px / 2);
+    background-color: e5e5e5;
+    
+  }
+  
+  @media screen and (max-width: 1080px) {
+    .wrapper {
+      border: none;
+    }
+  }
+  
+  @media screen and (max-width: 600px) {
+    .wrapper {
+      margin-top: 0;
+    }
+  }
