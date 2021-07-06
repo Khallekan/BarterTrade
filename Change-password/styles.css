@@ -69,8 +69,8 @@
     background: #f9f9f9;
     border: 1px solid #bfe8ff;
     border-radius: 4px;
-    height: 51px;
-    padding-left: 8px;
+    height: 30px;
+    padding-left: 50px;
   }
   
 
@@ -78,16 +78,19 @@
       background: #f9f9f9;
       border: 1px solid #bfe8ff;
       border-radius: 4px;
-      height: 51px;
-      padding-left: 8px;
+      height: 30px;
+      padding-left: 50px;
   }
   
   button {
     background: #087dc0;
     border-radius: 4px;
     color: #fff;
-    height: 60px;
+    height: 40px;
     border: 1px solid;
+    padding-left: 155px;
+    text-align: right;
+    
   }
   
   hr {
