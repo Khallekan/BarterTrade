@@ -18,21 +18,21 @@
       <aside>
         <nav>
           <ul class="nav-list">
-            <li id="dashboard-btn">
+            <li class="nav-btn" id="dashboard-btn">
               <ion-icon name="cube-sharp"></ion-icon
               ><a href="./dashboard.html"></a>Dashboard
             </li>
-            <li id="trade-btn">
+            <li class="nav-btn" id="trade-btn">
               <ion-icon name="analytics-sharp"></ion-icon
               ><a href="./trade/trade.html"></a>Trade
             </li>
-            <li id="wishlist-btn">
+            <li class="nav-btn" id="wishlist-btn">
               <ion-icon name="heart-sharp"></ion-icon>Wishlist
             </li>
-            <li id="history-btn">
+            <li class="nav-btn" id="history-btn">
               <ion-icon name="time-sharp"></ion-icon>History
             </li>
-            <li id="settings-btn">
+            <li class="nav-btn" id="settings-btn">
               <ion-icon name="settings-sharp"></ion-icon>Settings
             </li>
           </ul>
@@ -46,7 +46,7 @@
       </aside>
     </div>
 
-    <main id="dashboard">
+    <main class="content" id="dashboard">
       <div class="search-field-background">
         <div class="search-field">
           <input autofocus type="text" placeholder="Find items here" />
@@ -161,7 +161,7 @@
     </main>
 
     <!-- Trade -->
-    <div class="trade scroll" id="trade">
+    <div class="trade content scroll" id="trade">
       <h1>INVENTORY</h1>
       <div class="trade-grid">
         <div class="trade-item item1">
@@ -204,7 +204,7 @@
 
     <!-- Wishlist -->
 
-    <div class="wishlist scroll" id="wishlist">
+    <div class="wishlist content scroll" id="wishlist">
       <div class="wishlist-wrapper">
         <div class="search-field-background">
           <div class="search-field">
@@ -242,11 +242,11 @@
 
     <!-- History -->
 
-    <div class="history scroll" id="history">HISTORY</div>
+    <div class="history content scroll" id="history">HISTORY</div>
 
     <!-- Settings -->
 
-    <div class="settings scroll" id="settings">SETTINGS</div>
+    <div class="settings content scroll" id="settings">SETTINGS</div>
 
     <script src="./dashboard.js"></script>
     <script
