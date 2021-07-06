@@ -1,6 +1,6 @@
 /* Import Fonts */
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;800&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@500&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@500&display=swap');
 
 /* General reset */
 *,
@@ -10,7 +10,7 @@
   margin: 0;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
-  font-family: "Inter", sans-serif;
+  font-family: 'Inter', sans-serif;
 }
 html,
 body {
@@ -44,9 +44,9 @@ button {
 }
 
 button:hover {
-  background: #42baff !important;
-  color: white !important;
-  border: 1px solid #42baff !important;
+  background: #42baff;
+  color: white;
+  border: 1px solid #42baff;
 }
 li {
   list-style: none;
@@ -170,6 +170,18 @@ button,
   width: 90%;
   margin: 0 auto;
   padding: 2.5vh 0;
+}
+
+.nav-btns .nav-btns__btn:hover {
+  background: #42baff !important;
+  color: white !important;
+  border: 1px solid #42baff !important;
+}
+
+.nav-btns .nav-btns__btn button {
+  background: transparent;
+  border: none;
+  color: inherit;
 }
 
 .nav-btns .nav-btns__btn.login {
@@ -391,7 +403,7 @@ footer {
   -webkit-box-direction: normal;
   -ms-flex-flow: column nowrap;
   flex-flow: column nowrap;
-  text-align: left;
+  text-align: center;
   gap: 6vw;
 }
 
@@ -407,11 +419,11 @@ footer {
 }
 
 .ft-blk p {
-  font-size: 4.5vw;
+  font-size: 4vw;
 }
 
 .ft-blk .logo {
-  font-size: 7.5vw;
+  font-size: 5vw;
 }
 
 .ft-blk .logo span {
@@ -420,7 +432,7 @@ footer {
 
 .ft-blk h2,
 .ft-blk h3 {
-  font-size: 5.5vw;
+  font-size: 4vw;
   font-weight: 500;
 }
 
@@ -436,7 +448,7 @@ footer {
 }
 
 .quick-lk li {
-  font-size: 4.5vw;
+  font-size: 4vw;
 }
 
 .contact-mail,
@@ -445,13 +457,13 @@ footer {
   width: 100%;
   margin: 0 auto;
   text-align: left;
-  font-size: 4vw;
+  font-size: 3vw;
 }
 
 .contact-mail::before,
 .contact-tel::before,
 .contact-add::before {
-  content: "";
+  content: '';
   top: 0;
   left: 0;
   height: 10vw;
@@ -461,15 +473,15 @@ footer {
 }
 
 .contact-mail::before {
-  background: url("/contact/img/c-mail.png") no-repeat center/contain;
+  background: url('/contact/img/c-mail.png') no-repeat center/contain;
 }
 
 .contact-tel::before {
-  background: url("/contact/img/tel.png") no-repeat center/contain;
+  background: url('/contact/img/tel.png') no-repeat center/contain;
 }
 
 .contact-add::before {
-  background: url("/contact/img/location.png") no-repeat center/contain;
+  background: url('/contact/img/location.png') no-repeat center/contain;
 }
 
 .app div {
@@ -513,8 +525,8 @@ footer {
 }
 
 .go-up {
-  width: 10vw;
-  height: 10vw;
+  width: 7vw;
+  height: 7vw;
   background: white;
   position: absolute;
   top: 0;

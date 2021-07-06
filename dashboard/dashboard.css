@@ -1,348 +1,392 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    list-style: none;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
 }
 
 body {
-    font-family: 'Inter', sans-serif;
-    display: flex;
+  font-family: 'Inter', sans-serif;
+  display: flex;
 }
 
 .logo {
-    margin: 3em 3em;
+  margin: 3em 3em;
 }
 
 button {
-    cursor: pointer;
+  cursor: pointer;
 }
 
 .search-field-background {
-    background: #FAFAFA;
-    display: flex;
-    height: 20%;
-    width: 100%;
-    padding-top: 2em;
-    padding-bottom: 2em;
-    border-left: 1px solid rgb(190, 189, 189);
-    border-bottom: 1px solid rgb(190, 189, 189);
-    align-items: center;
+  background: #fafafa;
+  display: flex;
+  width: 100%;
+  padding-top: 2em;
+  padding-bottom: 2em;
+  border-left: 1px solid rgb(190, 189, 189);
+  border-bottom: 1px solid rgb(190, 189, 189);
+  align-items: center;
 }
 
 .search-field {
-    display: flex;
-    border: 2px solid #087DC0;
-    border-radius: 4px;
-    width: 70%;
-    height: auto;
-    margin-left: 2em;
+  display: flex;
+  border: 2px solid #087dc0;
+  border-radius: 4px;
+  width: 70%;
+  height: auto;
+  margin-left: 2em;
 }
 
 .search-field button {
-    background: #087DC0;
-    color: white;
-    border: 0;
-    width: 4em;
+  background: #087dc0;
+  color: white;
+  border: 0;
+  width: 4em;
 }
 
 .search-field ion-icon {
-    font-size: 2em;
-    align-self: center;
-    height: 1.5em;
+  font-size: 2em;
+  align-self: center;
+  height: 1.5em;
 }
 
 .search-field input {
-    height: 100%;
-    width: 100%;
-    border: 0;
-    padding: 1em;
-    align-self: center;
-    caret-color: #087DC0;
+  height: 100%;
+  width: 100%;
+  border: 0;
+  padding: 1em;
+  align-self: center;
+  caret-color: #087dc0;
 }
 
 .search-field input:focus {
-    outline: 0;
+  outline: 0;
 }
 
 .icons {
-    display: flex;
-    align-content: center;
-    margin-left: 3em;
+  display: flex;
+  align-content: center;
+  margin-left: 3em;
 }
 
-#mail, #notifications {
-    border: 0;
-    color: gray;
-    width: 3em;
-    background: #FAFAFA;
-    
+#mail,
+#notifications {
+  border: 0;
+  color: gray;
+  width: 3em;
+  background: #fafafa;
 }
 
-#mail ion-icon, #notifications ion-icon {
-    font-size: 2em;
-    align-self: center;
-    height: .8em;
+#mail ion-icon,
+#notifications ion-icon {
+  font-size: 2em;
+  align-self: center;
+  height: 0.8em;
 }
 
 .icons img {
-    margin-right: 8px;
-    margin-left: 3em;
+  margin-right: 8px;
+  margin-left: 3em;
 }
 
 #drop-down {
-    border: 0;
-    background: none;
-    font-size: 1.2em;
+  border: 0;
+  background: none;
+  font-size: 1.2em;
 }
 
 main {
-    display: flex;
-    width: 100%;
-    flex-direction: column;
-    /* grid-template-columns: 1.2fr 4fr;
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  /* grid-template-columns: 1.2fr 4fr;
     grid-template-rows: 2; */
 }
 
 main h4 {
-    margin-bottom: 1em;
-    margin-left: -2em;
-    color: #717171;
+  margin-bottom: 1em;
+  margin-left: -2em;
+  color: #717171;
 }
 
 /* Side nav styles */
 
 aside {
-    border-right: 1px solid #F5FBFF;
-    margin-top: 3em;
+  border-right: 1px solid #f5fbff;
+  margin-top: 3em;
 }
 
 aside li {
-    margin: .5em auto .5em 0;
-    padding: 1.5em;
-    padding-left: 3em;
-    height: 2em;
-    display: flex;
-    align-items: center;
-    cursor: pointer;
-    pointer-events: all;
+  margin: 0.5em auto 0.5em 0;
+  padding: 1.5em;
+  padding-left: 3em;
+  height: 2em;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  pointer-events: all;
 }
 
 .aside {
-    width: 23%;
-    background: #FAFAFA;
+  width: 23%;
+  background: #fafafa;
+  height: 100vh;
 }
 
-.add-border {
-    border-right: 3px solid #087DC0;
-    background: #F5FBFF;
-    color: #087DC0 !important;
+.active {
+  border-right: 3px solid #087dc0;
+  background: #f5fbff;
+  color: #087dc0 !important;
 }
 
 .nav-list li:hover {
-    border-right: 3px solid #087DC0;
-    background: #F5FBFF;
+  border-right: 3px solid #087dc0;
+  background: #f5fbff;
 }
 
 .nav-list li {
-    color: #717171;
+  color: #717171;
 }
 
 .nav-list ion-icon {
-    margin-right: 1em;
+  margin-right: 1em;
 }
 
 .logout {
-    margin-top: 8em;
+  margin-top: 8em;
 }
 
 .logout a {
-    text-decoration: none;
-    color: red;
-    display: flex;
-    align-items: center;
+  text-decoration: none;
+  color: red;
+  display: flex;
+  align-items: center;
 }
 
 .logout a:hover {
-    color: white;
-    background: red;
-    padding: 8px;
-    border-radius: 24px;
-    transition: .3s;
+  color: white;
+  background: red;
+  padding: 8px;
+  border-radius: 24px;
+  transition: 0.3s;
 }
 
 .logout ion-icon {
-    margin-right: .5em;
-    font-size: 1.8em;
+  margin-right: 0.5em;
+  font-size: 1.8em;
 }
 
 .remove {
-    display: none;
+  display: none;
+}
+
+/* Make content scrollable */
+
+.scroll {
+  width: 100%;
+  height: 100vh;
+  overflow-y: auto;
 }
 
 .dashboard {
-    margin-left: 4em;
-    margin-top: 3em;
+  margin-left: 4em;
+  margin-top: 3em;
 }
 
 .dashboard a:hover {
-    font-size: 1em;
-    transition: .3s;
+  font-size: 1em;
+  transition: 0.3s;
 }
 
 .categories {
-    display: flex;
+  display: flex;
 }
 
 .category {
-    display: flex;
-    flex-direction: column;
-    width: 20%;
+  display: flex;
+  flex-direction: column;
+  width: 20%;
 }
 
 .category img {
-    height: 5em;
-    width: 5em;
-    border-radius: 10px;
-    margin-right: 1em;
+  height: 5em;
+  width: 5em;
+  border-radius: 10px;
+  margin-right: 1em;
 }
 
 .category button {
-    height: 5em;
-    width: 5em;
-    border-radius: 10px;
-    border: 2px solid #087DC0;
-    font-size: 1.05em;
-    background: white;
+  height: 5em;
+  width: 5em;
+  border-radius: 10px;
+  border: 2px solid #087dc0;
+  font-size: 1.05em;
+  background: white;
 }
 
 .caption {
-    margin-top: 10px;
+  margin-top: 10px;
 }
 
 .category a {
-    color: black;
-    text-decoration: none;
+  color: black;
+  text-decoration: none;
 }
 
 .btn p {
-    margin-left: 1em;
+  margin-left: 1em;
 }
 
 #other {
-    font-size: 2.5em;
-    color: black;
+  font-size: 2.5em;
+  color: black;
 }
 
 .latest-barter {
-    margin-top: 2em;
+  margin-top: 2em;
 }
 
 .latest-barter h4 {
-    display: inline;
+  display: inline;
 }
 
 .see-all {
-    float: right;
-    text-decoration: none;
-    color: #717171;
-    display: flex;
-    align-items: center;
-    margin-right: 2em;
+  float: right;
+  text-decoration: none;
+  color: #717171;
+  display: flex;
+  align-items: center;
+  margin-right: 2em;
 }
 
 .barters {
-    display: flex;
-    margin-top: 1em;
+  display: flex;
+  margin-top: 1em;
 }
 .barter {
-    width: 30%;
-    text-align: center;
-    background: #F5FBFF;
-    margin: auto 1em;
-    border-radius: 10px;
-    padding: 1em;
+  width: 30%;
+  text-align: center;
+  background: #f5fbff;
+  margin: auto 1em;
+  border-radius: 10px;
+  padding: 1em;
 }
 
 .barter p {
-    font-size: 14px;
-    text-align: left;
-    width: 60%;
-    margin: .5em auto;
+  font-size: 14px;
+  text-align: left;
+  width: 60%;
+  margin: 0.5em auto;
 }
 
 .barter img {
-    height: 10em;
+  height: 10em;
 }
 
 /* Trade */
 
 .trade {
-    width: 100%;
-    text-align: center;
+  width: 100%;
+  text-align: center;
 }
 
 .trade h1 {
-    background: #087DC0;
-    color: white;
-    width: 100%;
-    padding: .55em;
+  background: #087dc0;
+  color: white;
+  width: 100%;
+  padding: 0.55em;
 }
 
 .trade-grid {
-    display: grid;
-    grid-template-columns: 2;
-    grid-template-rows: 2;
-    grid-gap: 2em;
-    margin-top: 2em;
+  display: grid;
+  grid-template-columns: 2;
+  grid-template-rows: 2;
+  grid-gap: 2em;
+  margin-top: 2em;
 }
 
 .trade-item {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    box-shadow: 0 0 10px #717171;
-    width: 70%;
-    margin: auto;
-    border-radius: .5em;
-    padding: 1em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 0 10px #717171;
+  width: 70%;
+  margin: auto;
+  border-radius: 0.5em;
+  padding: 1em;
 }
 
 .trade-item img {
-    height: 16em;
-    flex-basis: 40%;
+  height: 16em;
+  flex-basis: 40%;
 }
 
 .trade-item article {
-    text-align: left;
-    margin-left: 1em;
+  text-align: left;
+  margin-left: 1em;
 }
 
 .trade-item button {
-    background: #a4d2ec;
-    color: #087DC0;
-    padding: 10px 30px;
-    border: 0;
-    border-radius: 24px;
-    margin-top: 3em;
+  background: #a4d2ec;
+  color: #087dc0;
+  padding: 10px 30px;
+  border: 0;
+  border-radius: 24px;
+  margin-top: 3em;
 }
 
 .item1 {
-    grid-column: 1;
-    grid-row: 1;
+  grid-column: 1;
+  grid-row: 1;
 }
 
 .item2 {
-    grid-column: 1;
-    grid-row: 2;
+  grid-column: 1;
+  grid-row: 2;
 }
 
 .item3 {
-    grid-column: 2;
-    grid-row: 1;
+  grid-column: 2;
+  grid-row: 1;
 }
 
 .item4 {
-    grid-column: 2;
-    grid-row: 2;
+  grid-column: 2;
+  grid-row: 2;
+}
+
+.wishlist-wrapper {
+  height: 100%;
+  display: grid;
+  grid-template-rows: auto 1fr;
+}
+.wishlist-container {
+  height: 100%;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.no-wishlist_img {
+  width: 20%;
+  height: auto;
+}
+.no-wishlist_img img {
+  width: 100%;
+  height: auto;
+}
+.no-wishlist_text {
+  font-size: 1rem;
+}
+.no-wishlist_btn {
+  background: #087dc0;
+  outline: none;
+  border: none;
+  border-radius: 4px;
+  padding: 1.2rem;
+  color: white;
+  font-size: 0.8rem;
 }
