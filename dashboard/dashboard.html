@@ -14,7 +14,9 @@
 
   <body>
     <div class="aside">
-      <img src="./assets/BarterTrade.svg" alt="BarterTrade" class="logo" />
+      <div class="logo">
+        <img src="./assets/BarterTrade.svg" alt="BarterTrade" />
+      </div>
       <aside>
         <nav>
           <ul class="nav-list">
@@ -36,18 +38,27 @@
               <ion-icon name="settings-sharp"></ion-icon>Settings
             </li>
           </ul>
+          <ul class="logout">
+            <li id="logout">
+              <a> <ion-icon name="log-out"></ion-icon>Logout </a>
+            </li>
+          </ul>
         </nav>
-
-        <ul class="logout">
-          <li id="logout">
-            <a> <ion-icon name="log-out"></ion-icon>Logout </a>
-          </li>
-        </ul>
       </aside>
+      <div class="toggle-wrapper">
+        <div class="nav-toggle">
+          <ion-icon size- name="menu-outline"></ion-icon>
+        </div>
+      </div>
     </div>
 
-    <main class="content" id="dashboard">
+    <main class="content remove scroll" id="dashboard">
       <div class="search-field-background">
+        <div class="toggle-wrapper">
+          <div class="nav-toggle">
+            <ion-icon name="menu-outline"></ion-icon>
+          </div>
+        </div>
         <div class="search-field">
           <input autofocus type="text" placeholder="Find items here" />
           <button type="submit">
@@ -61,7 +72,9 @@
           <button type="submit" id="notifications">
             <ion-icon name="notifications"></ion-icon>
           </button>
-          <img src="./assets/profile.svg" alt="" />
+          <div class="icons-img">
+            <img src="./assets/profile.svg" alt="" />
+          </div>
           <button id="drop-down">
             <ion-icon name="chevron-down"></ion-icon>
           </button>
@@ -71,63 +84,65 @@
       <!-- Dashboard pages -->
 
       <div class="dashboard">
-        <h4>Popular categories</h4>
-        <div class="categories">
-          <div class="category">
-            <a href="#"
-              ><img src="./assets/iphone11.svg" alt="Electronics" />
-              <p class="caption">Electronics</p>
-            </a>
-          </div>
-          <div class="category">
-            <a href="#"
-              ><img src="./assets/iphone11.svg" alt="Phones" />
-              <p class="caption">Phones</p>
-            </a>
-          </div>
-          <div class="category">
-            <a href="#"
-              ><img src="./assets/iphone11.svg" alt="Computers" />
-              <p class="caption">Computers</p>
-            </a>
-          </div>
-          <div class="category">
-            <a href="#"
-              ><img src="./assets/washingmachine.svg" alt="Sneakers" />
-              <p class="caption">Sneakers</p>
-            </a>
-          </div>
-          <div class="category">
-            <a href="#"
-              ><img src="./assets/iphone11.svg" alt="Clothes" />
-              <p class="caption">Clothes</p>
-            </a>
-          </div>
-          <div class="category">
-            <a href="#"
-              ><img src="./assets/washingmachine.svg" alt="Furniture" />
-              <p class="caption">Furniture</p>
-            </a>
-          </div>
-          <div class="category">
-            <a href="#"
-              ><img src="./assets/washingmachine.svg" alt="Health" />
-              <p class="caption">Health</p>
-            </a>
-          </div>
-          <div class="category">
-            <a href="#"
-              ><img src="./assets/washingmachine.svg" alt="Gadgets" />
-              <p class="caption">Gadgets</p>
-            </a>
-          </div>
-          <div class="category btn">
-            <button>
-              <a href="#">
-                <ion-icon name="chevron-forward" id="other"></ion-icon>
+        <div class="popular-categories">
+          <h4>Popular categories</h4>
+          <div class="categories scroll-x">
+            <div class="category">
+              <a href="#" class="category-link"
+                ><img src="./assets/iphone11.svg" alt="Electronics" />
+                <p class="caption">Electronics</p>
               </a>
-            </button>
-            <p class="caption">Other</p>
+            </div>
+            <div class="category">
+              <a href="#" class="category-link"
+                ><img src="./assets/iphone11.svg" alt="Phones" />
+                <p class="caption">Phones</p>
+              </a>
+            </div>
+            <div class="category">
+              <a href="#" class="category-link"
+                ><img src="./assets/iphone11.svg" alt="Computers" />
+                <p class="caption">Computers</p>
+              </a>
+            </div>
+            <div class="category">
+              <a href="#" class="category-link"
+                ><img src="./assets/washingmachine.svg" alt="Sneakers" />
+                <p class="caption">Sneakers</p>
+              </a>
+            </div>
+            <div class="category">
+              <a href="#" class="category-link"
+                ><img src="./assets/iphone11.svg" alt="Clothes" />
+                <p class="caption">Clothes</p>
+              </a>
+            </div>
+            <div class="category">
+              <a href="#" class="category-link"
+                ><img src="./assets/washingmachine.svg" alt="Furniture" />
+                <p class="caption">Furniture</p>
+              </a>
+            </div>
+            <div class="category">
+              <a href="#" class="category-link"
+                ><img src="./assets/washingmachine.svg" alt="Health" />
+                <p class="caption">Health</p>
+              </a>
+            </div>
+            <div class="category">
+              <a href="#" class="category-link"
+                ><img src="./assets/washingmachine.svg" alt="Gadgets" />
+                <p class="caption">Gadgets</p>
+              </a>
+            </div>
+            <div class="category btn">
+              <button>
+                <a href="#">
+                  <ion-icon name="chevron-forward" id="other"></ion-icon>
+                </a>
+              </button>
+              <p class="caption">Other</p>
+            </div>
           </div>
         </div>
 
@@ -136,7 +151,7 @@
           <a href="#" class="see-all"
             >See all<ion-icon name="chevron-forward" id="see-all"></ion-icon
           ></a>
-          <div class="barters">
+          <div class="barters scroll-x">
             <div class="barter">
               <a href="#"><img src="./assets/iphone11.svg" alt="iPhone11" /></a>
               <p>Iphone 11 pro worth:N500,000 Exchanging With: Samsung S21</p>
@@ -161,8 +176,15 @@
     </main>
 
     <!-- Trade -->
-    <div class="trade content scroll" id="trade">
-      <h1>INVENTORY</h1>
+    <div class="trade content remove scroll" id="trade">
+      <div class="header">
+        <div class="toggle-wrapper">
+          <div class="nav-toggle">
+            <ion-icon name="menu-outline"></ion-icon>
+          </div>
+        </div>
+        <h1>INVENTORY</h1>
+      </div>
       <div class="trade-grid">
         <div class="trade-item item1">
           <img src="./assets/nikeairsneakers.svg" alt="" />
@@ -204,9 +226,14 @@
 
     <!-- Wishlist -->
 
-    <div class="wishlist content scroll" id="wishlist">
+    <div class="wishlist content remove scroll" id="wishlist">
       <div class="wishlist-wrapper">
         <div class="search-field-background">
+          <div class="toggle-wrapper">
+            <div class="nav-toggle">
+              <ion-icon name="menu-outline"></ion-icon>
+            </div>
+          </div>
           <div class="search-field">
             <input autofocus type="text" placeholder="Find items here" />
             <button type="submit">
@@ -242,13 +269,66 @@
 
     <!-- History -->
 
-    <div class="history content scroll" id="history">HISTORY</div>
+    <div class="history content remove scroll" id="history">
+      <div class="search-field-background">
+        <div class="toggle-wrapper">
+          <div class="nav-toggle">
+            <ion-icon name="menu-outline"></ion-icon>
+          </div>
+        </div>
+        <div class="search-field">
+          <input autofocus type="text" placeholder="Find items here" />
+          <button type="submit">
+            <ion-icon name="search"></ion-icon>
+          </button>
+        </div>
+        <div class="icons">
+          <button type="submit" id="mail">
+            <ion-icon name="mail"></ion-icon>
+          </button>
+          <button type="submit" id="notifications">
+            <ion-icon name="notifications"></ion-icon>
+          </button>
+          <img src="./assets/profile.svg" alt="" />
+          <button id="drop-down">
+            <ion-icon name="chevron-down"></ion-icon>
+          </button>
+        </div>
+      </div>
+      HISTORY
+    </div>
 
     <!-- Settings -->
 
-    <div class="settings content scroll" id="settings">SETTINGS</div>
+    <div class="settings content remove scroll" id="settings">
+      <div class="search-field-background">
+        <div class="toggle-wrapper">
+          <div class="nav-toggle">
+            <ion-icon name="menu-outline"></ion-icon>
+          </div>
+        </div>
+        <div class="search-field">
+          <input autofocus type="text" placeholder="Find items here" />
+          <button type="submit">
+            <ion-icon name="search"></ion-icon>
+          </button>
+        </div>
+        <div class="icons">
+          <button type="submit" id="mail">
+            <ion-icon name="mail"></ion-icon>
+          </button>
+          <button type="submit" id="notifications">
+            <ion-icon name="notifications"></ion-icon>
+          </button>
+          <img src="./assets/profile.svg" alt="" />
+          <button id="drop-down">
+            <ion-icon name="chevron-down"></ion-icon>
+          </button>
+        </div>
+      </div>
+      SETTINGS
+    </div>
 
-    <script src="./dashboard.js"></script>
     <script
       type="module"
       src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
@@ -257,5 +337,6 @@
       nomodule
       src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
     ></script>
+    <script src="./dashboard.js"></script>
   </body>
 </html>
