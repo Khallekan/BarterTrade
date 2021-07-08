@@ -1,13 +1,3 @@
-let dashboardBtn = document.querySelector('#dashboard-btn');
-let dashboardPage = document.querySelector('#dashboard');
-let tradeBtn = document.querySelector('#trade-btn');
-let tradePage = document.querySelector('#trade');
-let wishlistBtn = document.querySelector('#wishlist-btn');
-let wishlistPage = document.querySelector('#wishlist');
-let historyBtn = document.querySelector('#history-btn');
-let historyPage = document.querySelector('#history');
-let settingsBtn = document.querySelector('#settings-btn');
-let settingsPage = document.querySelector('#settings');
 let logoutBtn = document.getElementById('logout');
 let refreshToken = localStorage.getItem('zuribartertrade');
 // Create arrays of elements with matching classnames
@@ -29,7 +19,6 @@ const checkRefreshValidity = async () => {
       },
       validUrl = 'https://bartertradeapi.herokuapp.com/auth/jwt/verify/',
       refreshUrl = 'https://bartertradeapi.herokuapp.com/auth/jwt/refresh/';
-
     try {
       const validResp = await fetch(validUrl, validOptions);
       if (validResp.status >= 300) {
@@ -56,10 +45,8 @@ const checkRefreshValidity = async () => {
 };
 
 if (
-  // change to http://localhost:5500/dashboard/dashboard.html on your pc
-  // and https://zuri-bartertrade.vercel.app/signin/signin.html before
-  // pushing to github
-  document.referrer !== 'https://zuri-bartertrade.vercel.app/signin/signin.html'
+  !document.referrer.includes('signin') &&
+  !document.referrer.includes('dashboard')
 ) {
   checkRefreshValidity();
 }
@@ -121,3 +108,29 @@ const handleUserLogout = () => {
 };
 
 logoutBtn.addEventListener('click', handleUserLogout);
+
+let isSideBarOpen = false;
+const sideBar = document.querySelector('.aside');
+const sideBarBtns = Array.from(
+  document.getElementsByClassName('toggle-wrapper')
+);
+
+const handleSideBar = () => {
+  switch (isSideBarOpen) {
+    case false:
+      sideBar.classList.add('show');
+      isSideBarOpen = true;
+      break;
+    case true:
+      sideBar.classList.remove('show');
+      isSideBarOpen = false;
+      break;
+    default:
+      break;
+  }
+};
+
+const sideBarBtnsEventListener = sideBarBtns.map((item, index) => {
+  item.addEventListener('click', handleSideBar);
+});
+console.log(sideBarBtns);
