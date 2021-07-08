@@ -89,9 +89,12 @@ const handleFormSubmit = async (e) => {
     const data = await createJwtResp.json();
     if (isRememberMeChecked) {
       localStorage.setItem('zuribartertrade', data.refresh);
+      sessionStorage.removeItem('zuribartertrade');
+    } else {
+      localStorage.removeItem('zuribartertrade');
+      sessionStorage.setItem('zuribartertrade', data.refresh);
     }
     if (createJwtResp.status >= 300) {
-      // console.log(documentError);
       documentError.innerHTML = `Please sign up or click the link in the email sent to you`;
       documentError.style.display = 'flex';
     }
@@ -116,8 +119,6 @@ const handleFormSubmit = async (e) => {
         window.location.replace('../dashboard/dashboard.html');
       }
     }
-
-    // console.log(data);
   } catch (error) {
     throw new Error(error);
   }
