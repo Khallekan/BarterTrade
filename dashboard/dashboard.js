@@ -1,12 +1,14 @@
 let logoutBtn = document.getElementById('logout');
-let refreshToken = localStorage.getItem('zuribartertrade');
+let refreshToken =
+  localStorage.getItem('zuribartertrade') ||
+  sessionStorage.getItem('zuribartertrade');
 // Create arrays of elements with matching classnames
 let navBtns = Array.from(document.getElementsByClassName('nav-btn'));
 let contentItems = Array.from(document.getElementsByClassName('content'));
 
 // CHECK IF USER IS VERIFIED AND ACCEPT OR REJECT LOGIN
 const checkRefreshValidity = async () => {
-  if (refreshToken !== null) {
+  if (refreshToken !== null && refreshToken !== undefined) {
     const validParams = {
         token: refreshToken,
       },
@@ -41,15 +43,11 @@ const checkRefreshValidity = async () => {
     } catch (error) {
       throw new Error(error);
     }
+  } else {
+    window.location.replace('../signin/signin.html');
   }
 };
-
-if (
-  !document.referrer.includes('signin') &&
-  !document.referrer.includes('dashboard')
-) {
-  checkRefreshValidity();
-}
+checkRefreshValidity();
 
 // Set button active and content active
 const setActive = (btn, content) => {
@@ -104,6 +102,7 @@ const buttonClick = navBtns.map((btn, index) => {
 
 const handleUserLogout = () => {
   localStorage.removeItem('zuribartertrade');
+  sessionStorage.removeItem('zuribartertrade');
   window.location.replace('../signin/signin.html');
 };
 
@@ -133,4 +132,3 @@ const handleSideBar = () => {
 const sideBarBtnsEventListener = sideBarBtns.map((item, index) => {
   item.addEventListener('click', handleSideBar);
 });
-console.log(sideBarBtns);
