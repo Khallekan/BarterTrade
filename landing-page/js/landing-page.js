@@ -1,4 +1,6 @@
-const refreshToken = localStorage.getItem('zuribartertrade');
+const refreshToken =
+  localStorage.getItem('zuribartertrade') ||
+  sessionStorage.getItem('zuribartertrade');
 
 const fetchAndRedirect = async () => {
   const validUrl = 'https://bartertradeapi.herokuapp.com/auth/jwt/verify/',
