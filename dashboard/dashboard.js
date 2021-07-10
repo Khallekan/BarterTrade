@@ -132,3 +132,47 @@ const handleSideBar = () => {
 const sideBarBtnsEventListener = sideBarBtns.map((item, index) => {
   item.addEventListener('click', handleSideBar);
 });
+
+// For mobile search bar
+
+const searchFormArr = Array.from(
+  document.getElementsByClassName('search-field')
+);
+const closeArr = Array.from(document.getElementsByClassName('close'));
+const searchIconArr = Array.from(
+  document.getElementsByClassName('mobile-search')
+);
+
+const handleSearchFormSubmit = (e) => {
+  e.preventDefault();
+};
+
+const setShow = () => {};
+
+const handleShowSearchIconClick = (index) => {
+  let presentSearchField = searchFormArr[index];
+  presentSearchField.classList.add('show');
+  return;
+};
+
+const handlecloseMobileSearch = (index) => {
+  let presentSearchField = searchFormArr[index];
+  presentSearchField.classList.remove('show');
+  return;
+};
+
+const closeMobileSearch = closeArr.map((closeIcon, index) => {
+  return closeIcon.addEventListener('click', () => {
+    return handlecloseMobileSearch(index);
+  });
+});
+
+const showMobileSearch = searchIconArr.map((searchIcon, index) => {
+  return searchIcon.addEventListener('click', () => {
+    return handleShowSearchIconClick(index);
+  });
+});
+
+const searchFormSubmit = searchFormArr.map((searchForm) => {
+  return searchForm.addEventListener('submit', handleSearchFormSubmit);
+});

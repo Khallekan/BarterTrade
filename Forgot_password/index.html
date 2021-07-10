@@ -13,17 +13,16 @@
         <a class="logo" href="/index.html"><span>b</span>artertrade</a>
         <h3>Password Assistance</h3>
         <p>
-          Enter the email address or mobile phone number associated with your
-          Barter Trade account.
+          Enter the email address associated with your Barter Trade account.
         </p>
-        <form>
-          <label for="email-pass">Email or Phone Number</label>
+        <form id="continue">
+          <label for="email-pass">Email <span class="error-text"></span></label>
           <input
             type="text"
             id="email-pass"
             placeholder="Enter Email or Phone Number"
           />
-          <button>Continue</button>
+          <button type="submit">Continue</button>
         </form>
         <hr />
       </main>
@@ -33,5 +32,7 @@
         <p>&copy; 2021 BarterTrade</p>
       </div>
     </footer>
+
+    <script src="./index.js"></script>
   </body>
 </html>
